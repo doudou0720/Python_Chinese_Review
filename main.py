@@ -1,7 +1,7 @@
 # 导入Flask类库
 from flask import Flask , render_template
 # 创建应用实例
-app = Flask(__name__)
+app = Flask(__name__,template_folder="./templates",static_folder="./static")
 # 视图函数（路由）
 @app.route('/')
 def index():
