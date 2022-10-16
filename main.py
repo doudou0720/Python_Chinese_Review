@@ -6,9 +6,9 @@ app = Flask(__name__,template_folder="./templates",static_folder="./static")
 def create_uuid():
 	return uuid.uuid4().hex
 # 视图函数（路由）
-@app.route('/')
+@app.route('/test/home')
 def index():
-	return render_template("loading.html")
+	return render_template("home.html")
 # 启动实施（只在当前模块运行）
 
 if __name__ == '__main__':
