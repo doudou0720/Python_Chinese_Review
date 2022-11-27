@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <!-- 以最高版本的IE浏览器来渲染 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 视口的设置：视口的宽度和设备一致，默认的缩放比例和PC端一致，用户不能自行缩放 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--[if lt IE 9]>
+          <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.css') }}">
+        <style type="text/css">
+          a{text-decoration: none;}
+        </style>
+        <script src="{{ url_for('static',filename='js/bootstrap.bundle.js') }}"></script>
+        <title>关于/鸣谢名单</title>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">导航栏</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/home">主页</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./listen/choose">听写</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  其它
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="./history">历史</a></li>
+                  <li><a class="dropdown-item" href="./settings">设置</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item disabled">关于</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item link-danger" href="../login">登出</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="alert alert-warning" role="alert">
+        <h4 class="alert-heading">可读性</h4>
+        <p>浏览此页建议使用横屏<s>(我也不知道没什么)(TODO List+1)</s></p>
+      </div>
+      <div class = "row">
+      <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3 col-3">
+        <div class="row">
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link" href="#item-1">提供技术指导支持</a>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-3 my-1" href="#item-1-1">CSDN</a>
+            <a class="nav-link ms-3 my-1" href="#item-1-2">Github</a>
+          </nav>
+          <a class="nav-link" href="#item-2">提供代码编辑支持(VSCode&Github Codespace)</a>
+          <a class="nav-link" href="#item-3">提供技术服务支持</a>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-3 my-1" href="#item-3-1">Python</a>
+            <a class="nav-link ms-3 my-1" href="#item-3-2">Github</a>
+            <a class="nav-link ms-3 my-1" href="#item-3-3">BootStrap & Bootstrap Icons</a>
+            <a class="nav-link ms-3 my-1" href="#item-3-4">SQLite</a>
+          </nav>
+        </nav>
+      </div>
+      </nav>
+      
+      <div class = "col-9" data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+        <h4 id="item-1">提供技术指导支持</h4>
+        <h5 id="item-1-1">CSDN<img src="https://img-home.csdnimg.cn/images/20201124032511.png" alt=""></h5>
+        <p>国内庞大的编程社区,大部分问题都可以得到解决(国内stack overflow)</p>
+        <h5 id="item-1-2">Github</h5>
+        <p>拥有N+个开源免费项目(前提越过某道墙)</p>
+        <div class="alert alert-danger" role="alert">
+          <h4 class="alert-heading">不建议翻墙</h4>
+          <p>根据<a href="http://www.gov.cn/zhengce/2020-12/26/content_5574802.htm">《中华人民共和国计算机信息网络国际联网管理暂行规定》</a>以及<a href="https://focus.scol.com.cn/shwx/202007/57862317.html">有关事件</a>,作者建议你使用CDN/host解决</p>
+        </div>
+        <br>
+        <h4 id="item-2">提供代码编辑支持</h4>
+        <p>VSCode -> 进入<a href="https://vscode.dev/">https://vscode.dev</a>进行体验</p>
+        <p>Github Codespace -> <a href="https://docs.github.com/cn/codespaces">官方文档</a></p>
+        <div class="alert alert-danger" role="alert">
+          <h4 class="alert-heading">不建议翻墙</h4>
+          <p>根据<a href="http://www.gov.cn/zhengce/2020-12/26/content_5574802.htm">《中华人民共和国计算机信息网络国际联网管理暂行规定》</a>以及<a href="https://focus.scol.com.cn/shwx/202007/57862317.html">有关事件</a>,作者建议你使用CDN/host解决</p>
+        </div>
+        <br>
+        <h4 id="item-3">提供技术服务支持</h4>
+        <h5 id="item-3-1">Python</h5>
+        <p>具体就不说了<s>(不是我懒)</s></p>
+        <p><a href="https://www.python.org/">官网</a></p>
+        <h5 id="item-3-2">Github</h5>
+        <p>提供项目储存服务</p>
+        <div class="alert alert-danger" role="alert">
+          <h4 class="alert-heading">不建议翻墙</h4>
+          <p>根据<a href="http://www.gov.cn/zhengce/2020-12/26/content_5574802.htm">《中华人民共和国计算机信息网络国际联网管理暂行规定》</a>以及<a href="https://focus.scol.com.cn/shwx/202007/57862317.html">有关事件</a>,作者建议你使用CDN/host解决</p>
+        </div>
+        <h5 id="item-3-3">BootStrap & Bootstrap Icons</h5>
+        <p>这些网站的美化都是以这个项目为基础的<s>美化成这样是我的问题</s></p>
+        <a href="https://v5.bootcss.com/">官网(版本5)</a>
+        <h5 id="item-3-4">SQLite</h5>
+        <p>SQL是什么请自行百度</p>
+        <p>软件数据库语言,内置于Python中</p>
+      </div>
+      </div>
+    </body>
+</html>

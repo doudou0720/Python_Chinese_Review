@@ -24,7 +24,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link">主页</a>
+                <a class="nav-link" href="/home">主页</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./listen/choose">听写</a>
@@ -34,10 +34,12 @@
                   其它
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item  disabled" href="./historys">历史</a></li>
+                  <li><a class="dropdown-item  disabled"href="./historys">历史</a></li>
                   <li><a class="dropdown-item" href="./settings">设置</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="../login">登出</a></li>
+                  <li><a class="dropdown-item" href="./about">关于</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item link-danger" href="../login">登出</a></li>
                 </ul>
               </li>
             </ul>
@@ -48,5 +50,14 @@
           </div>
         </div>
       </nav>
+      {%for i in historys%}
+      <div class="card">
+        <div>
+          <h5 class="card-title">{{i["title"]}}</h5>
+          <p>{{i["description"]}}</p>
+          <a href="/history_viewer?id={{i["id"]}}" class="btn btn-primary" style="width:50%">查看详细</a>
+        </div>
+      </div>
+      {% endfor %}
     </body>
 </html>
