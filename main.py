@@ -1,7 +1,6 @@
-import uuid , os
-from flask import Flask , render_template , request
+import uuid , os ,json
+from flask import Flask , render_template , request ,jsonify
 # 创建应用实例
-print(os.chdir)
 app = Flask(__name__,template_folder="./templates",static_folder="./static")
 def create_uuid():
     return uuid.uuid4().hex
@@ -18,10 +17,13 @@ def history():
 @app.route('/whiledoing')#任务进行时
 def while_doing():
     return render_template("whiledoing.html")
-@app.route('/get_task_json')#后台:获取任务json
+@app.route('/get_task_json',methods=['POST'])#后台:获取任务json
 def get_task_json():
-    id = request.args.get("id")
-    return "OK"
+    try:
+        with open("./data/Tasks/{name}.json".format(name=request.form["id"]),"r",encoding="utf-8") as f:
+            return jsonify(json.dumps((f.read()).strip("\n")))
+    except Exception as e:
+        return "Error:"+str(e) , 404
 # 启动实施（只在当前模块运行）
 if __name__ == '__main__':
     app.run(debug=True,port=80,host="0.0.0.0")
