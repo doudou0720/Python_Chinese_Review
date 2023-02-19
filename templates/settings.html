@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <!-- 以最高版本的IE浏览器来渲染 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 视口的设置：视口的宽度和设备一致，默认的缩放比例和PC端一致，用户不能自行缩放 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--[if lt IE 9]>
+          <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+        <script src="{{ url_for('static',filename='js/bootstrap.bundle.js') }}"></script>
+        <title>设置</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">导航栏</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                        <a class="nav-link" href="./home">主页</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="./listen/choose">听写</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="./study">学习</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            其它
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./historys">历史</a></li>
+                            <li><a class="dropdown-item  disabled" href="./settings">设置</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="./about">关于</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item link-danger" href="../login">登出</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+        </nav>
+        <div class="alert alert-danger" role="alert">
+            请注意：更改一些设置可能会导致应用程序不可用！此时请查看templates/help.html（可用浏览器打开）中关于“如何转移数据”或使用backup_settings.json替换settings.json
+        </div>
+        <div class="alert alert-info" role="alert">
+            部分设置需要重启程序才能生效（OCR配置等需要重启电脑）
+        </div>
+        <div class="alert alert-warning" role="alert">
+            一些设置可能被设置为不可用状态，请打开帮助文档以从json中修改(不要修改版本号！！！可能会导致检查更新功能失效！)
+        </div>
+    </body>
+</html>

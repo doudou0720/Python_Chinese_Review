@@ -23,6 +23,7 @@
               type : 'post', 
               cache: false,//不缓存
               success : function(datas) {
+                debugger;
                 document.getElementById("type").innerHTML=$.parseJSON(datas)["data"]["type"]
               }});}		
         </script>
