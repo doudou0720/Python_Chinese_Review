@@ -1,19 +1,33 @@
 import uuid
 import json
 from flask import Flask, make_response , render_template , request ,jsonify 
+import logging
 # 创建日志
+main_logger=logging.getLogger('MAIN')
+main_logger.setLevel(logging.INFO)
+logfile = './log.log'
+fh = logging.FileHandler(logfile, mode='w')  # open的打开模式这里可以进行参考
+fh.setLevel(logging.WARNING)  # 输出到file的log等级的开关
+ch = logging.StreamHandler()
+ch.setLevel(logging.INFO)   # 输出到console的log等级的开关
+formatter = logging.Formatter("%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s")
+fh.setFormatter(formatter)
+ch.setFormatter(formatter)
+main_logger.addHandler(fh)
+main_logger.addHandler(ch)
 # 创建应用实例
 app = Flask(__name__,template_folder="./templates",static_folder="./static")
 
 # 载入拓展
-print("载入拓展...")
+main_logger.info("载入拓展...")
 try:
-    with open("./extensions/index.json","rb") as f:
-        ext = json.load(f)
-except:
-    print("扩展列表存在问题!程序自动终止，请向作者进行反馈!")
+    import extensions.extensions_loader.init as extensions_loader
+    extensions_loader.init(fh,ch,app)
+    extensions_loader.ext_checker()
+except Exception as e:
+    main_logger.exception(e)
+    main_logger.critical("扩展列表存在问题!程序自动终止，请向作者进行反馈!")
     exit(-1)
-print(ext)
 # 视图函数（路由）
 @app.route('/home')#主页
 def index():
@@ -80,6 +94,8 @@ def show_extensions(name):
             with open("./extensions"+i["path_info"],"rb") as f:
                 ext0 = json.load(f)
     return render_template("show_extensions_more.html",exts=ext0)
+
+logging.info("程序拓展启动完成!")
 # 启动实施（只在当前模块运行）
 if __name__ == '__main__':
     app.run(debug=True,port=5000,host="0.0.0.0",ssl_context='adhoc')
