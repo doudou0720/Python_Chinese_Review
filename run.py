@@ -4,10 +4,17 @@ from flask import Flask, make_response , render_template , request ,jsonify
 # 创建日志
 # 创建应用实例
 app = Flask(__name__,template_folder="./templates",static_folder="./static")
-# 创建变量用于计数
-TOTAL = 5
-count = 0
-# 视图函数（路由）5
+
+# 载入拓展
+print("载入拓展...")
+try:
+    with open("./extensions/index.json","rb") as f:
+        ext = json.load(f)
+except:
+    print("扩展列表存在问题!程序自动终止，请向作者进行反馈!")
+    exit(-1)
+print(ext)
+# 视图函数（路由）
 @app.route('/home')#主页
 def index():
     """
@@ -16,7 +23,7 @@ def index():
     :return string
     """
     return render_template("home.html",user_name = "test")
-count += 1
+
 @app.route('/about')#关于
 def about():
     """
@@ -25,7 +32,7 @@ def about():
     :return string
     """
     return render_template("about.html")
-count += 1
+
 @app.route('/history')#历史
 def history():
     return render_template(
@@ -43,31 +50,36 @@ def history():
             }
         ]
     )
-count += 1
+
 @app.route('/whiledoing')#任务进行时
 def while_doing():
     return render_template("whiledoing.html")
-count += 1
+
 @app.route('/settings')#设置
 def settings():
     return render_template("settings.html")
-@app.route('/get_task_json',methods=['POST'])#后台:获取任务json
-def get_task_json():
-    try:
-        with open(
-            "./data/Tasks/{name}.json".format(
-                name=request.form["id"]
-            ),
-            "r",
-            encoding="utf-8"
-        ) as f:
-            return jsonify(json.dumps((f.read()).strip("\n")))
-    except Exception as Error_in_main:
-        return make_response("<h2>Error!See the log file in flask.log</h2>", 404)
-count += 1
-del TOTAL , count
-def create_uuid():
-    return uuid.uuid4().hex
+
+@app.route('/extension')#拓展列表
+def show_extensions():
+    global ext
+    temp = ext["index"]
+    temp1 = []
+    for i in temp:
+        with open("./extensions"+i["path_info"],"rb") as f:
+            ext0 = json.load(f)
+        temp1.append(ext0)
+    return render_template("show_extensions.html",exts=temp1)
+
+@app.route('/extension/<name>')#拓展列表
+def show_extensions(name):
+    global ext
+    temp = ext["index"]
+    temp1 = []
+    for i in temp:
+        if i["name"] == name:
+            with open("./extensions"+i["path_info"],"rb") as f:
+                ext0 = json.load(f)
+    return render_template("show_extensions_more.html",exts=ext0)
 # 启动实施（只在当前模块运行）
 if __name__ == '__main__':
     app.run(debug=True,port=5000,host="0.0.0.0",ssl_context='adhoc')

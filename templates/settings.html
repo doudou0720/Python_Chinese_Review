@@ -62,5 +62,21 @@
         <div class="alert alert-warning" role="alert">
             一些设置可能被设置为不可用状态，请打开帮助文档以从json中修改(不要修改版本号！！！可能会导致检查更新功能失效！)
         </div>
+        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            点击查看拓展设置
+        </a>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                <div>
+                    <img src="{{ url_for('static',filename='icons/box-arrow-up-right.svg') }}"><a href="./show_extensions">新标签页打开
+                </div>
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <iframe src="./extension"></iframe>
+            </div>
+        </div>
     </body>
 </html>

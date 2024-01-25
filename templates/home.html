@@ -12,13 +12,6 @@
         <![endif]-->
         <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
         <script src="{{ url_for('static',filename='js/bootstrap.bundle.js') }}"></script>
-        <script>
-          user_name = '{{user_name | safe}}'
-          window.onload=function(){
-           get()
-          }
-
-        </script>
         <title>Home</title>
     </head>
     <body>
