@@ -5,7 +5,7 @@
         {
             "packge_name":"main.basic.english.reading",
             "check_url":"",
-            "init_name":"main/english/reading/"
+            "init_name":"main.english.reading"
         }
     ]
 }

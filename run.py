@@ -75,27 +75,15 @@ def settings():
 
 @app.route('/extension')#拓展列表
 def show_extensions():
-    global ext
-    temp = ext["index"]
-    temp1 = []
-    for i in temp:
-        with open("./extensions"+i["path_info"],"rb") as f:
-            ext0 = json.load(f)
-        temp1.append(ext0)
-    return render_template("show_extensions.html",exts=temp1)
+    return render_template("show_extensions.html",exts=extensions_loader.get_ext_info())
 
 @app.route('/extension/<name>')#拓展列表
-def show_extensions(name):
-    global ext
-    temp = ext["index"]
-    temp1 = []
-    for i in temp:
-        if i["name"] == name:
-            with open("./extensions"+i["path_info"],"rb") as f:
-                ext0 = json.load(f)
-    return render_template("show_extensions_more.html",exts=ext0)
+def show_extensions_more(name):
+    ext = (extensions_loader.get_ext_info([name])[0])
+    return render_template("show_extensions_more.html",ext=ext)
 
 logging.info("程序拓展启动完成!")
 # 启动实施（只在当前模块运行）
 if __name__ == '__main__':
-    app.run(debug=True,port=5000,host="0.0.0.0",ssl_context='adhoc')
+    # app.run(debug=True,port=5000,host="0.0.0.0",ssl_context='adhoc')
+    app.run(debug=True,port=5000,host="0.0.0.0")
