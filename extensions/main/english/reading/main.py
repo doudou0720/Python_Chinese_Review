@@ -5,9 +5,14 @@ import sys,os,re
 
 sys.path.append("../../../../")
 letters = "/[^qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM ()'\"-.\n]/g"
-# from run import app
-# app = Flask(__name__,template_folder=f"{os.getcwd()}/templates/extensions/main/english/reading/",static_folder=f"{os.getcwd()}/static")
+__is_init__ = False
 
+# from run import app
+app = Flask
+
+def init(k:Flask):
+    global app
+    app = k
 
 @app.route("/extension/main.basic.english.reading/show_articles")
 def show_articles():

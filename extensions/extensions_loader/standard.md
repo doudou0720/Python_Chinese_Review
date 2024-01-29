@@ -14,3 +14,11 @@
 | "packge_name" | 插件包名     |
 | "check_url"   | 检查更新地址 |
 | "init_name"   | 目录名       |
+
+# 拓展接口
+
+## .init()
+
+| 参数 | 说明      |
+| ---- | --------- |
+| app  | flask app |
