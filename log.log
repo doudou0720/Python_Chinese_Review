@@ -1,13 +1,6 @@
-2024-01-29 10:05:25,123 - run.py[line:22] - INFO: 载入拓展...
-2024-01-29 10:05:25,135 - init.py[line:32] - INFO: 距离上一次检查更新过去了18天,即将开始本次检查...
-2024-01-29 10:05:25,135 - init.py[line:34] - INFO: 检查成功
-2024-01-29 10:05:25,136 - init.py[line:36] - INFO: 写入json成功
-2024-01-29 10:05:25,136 - init.py[line:39] - INFO: 正在导入第1个(main.basic.english.reading),共1个
-2024-01-29 10:05:25,142 - run.py[line:28] - ERROR: init() missing 1 required positional argument: 'k'
-Traceback (most recent call last):
-  File "E:\doudou\Python_Chinese_Review\run.py", line 26, in <module>
-    extensions_loader.ext_checker()
-  File "E:\doudou\Python_Chinese_Review\extensions\extensions_loader\init.py", line 43, in ext_checker
-    import_ext[json_data["data"][i]["packge_name"]].init()
-TypeError: init() missing 1 required positional argument: 'k'
-2024-01-29 10:05:25,145 - run.py[line:29] - CRITICAL: 扩展列表存在问题!程序自动终止，请向作者进行反馈!
+2024-01-30 10:15:52,483 - run.py[line:22] - INFO: 载入拓展...
+2024-01-30 10:15:52,494 - init.py[line:34] - INFO: 距离上一次检查更新过去了19天,即将开始本次检查...
+2024-01-30 10:15:52,495 - init.py[line:36] - INFO: 检查成功
+2024-01-30 10:15:52,495 - init.py[line:38] - INFO: 写入json成功
+2024-01-30 10:15:52,495 - init.py[line:41] - INFO: 正在导入第1个(main.basic.english.reading),共1个
+2024-01-30 10:15:54,685 - init.py[line:48] - INFO: 导入完成！

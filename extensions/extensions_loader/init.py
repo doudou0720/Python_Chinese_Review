@@ -9,22 +9,26 @@ import importlib
 __is_init__ = False
 extension_logger = logging.getLogger('EXT(extensions_loader)')
 extension_logger.setLevel(logging.INFO)
+fh = logging.FileHandler
+ch = logging.StreamHandler
 run_dir = os.path.split(__file__)[0]
 import_ext = {}
 ext_list = []
 app = flask.Flask
 
 
-def init(fh:logging.FileHandler,ch:logging.StreamHandler,f:flask.Flask):
-    global __is_init__ , extension_logger ,app
-    extension_logger.addHandler(ch)
-    extension_logger.addHandler(fh)
+def init(f:logging.FileHandler,c:logging.StreamHandler,fl:flask.Flask):
+    global __is_init__ , extension_logger ,app ,fh , ch
+    extension_logger.addHandler(c)
+    extension_logger.addHandler(f)
+    fh = f
+    ch = c
     sys.path.append(os.path.abspath(os.path.split(__file__)[0]+"/../"))
     __is_init__ = True
-    app = f
+    app = fl
 
 def ext_checker():
-    global import_ext , app
+    global import_ext , app ,fh , ch
     if __is_init__ == False:
         raise TypeError("你尚未初始化!")
     with open("{path}/data/installed_packges.json".format(path=run_dir),'r',encoding='utf8') as f:

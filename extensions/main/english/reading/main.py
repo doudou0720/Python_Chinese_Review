@@ -1,29 +1,32 @@
-import sqlite3
-import flask
 from flask import render_template,request,Flask
-import sys,os,re
+import os,re,logging,json
 
-sys.path.append("../../../../")
+
 letters = "/[^qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM ()'\"-.\n]/g"
-__is_init__ = False
-
+extension_logger = logging.Logger
+run_dir = ""
+json_info = {}
 # from run import app
 app = Flask
 
-def init(k:Flask):
-    global app
+def init(k:Flask,ext_logger:logging.Logger,run_d:str):
+    global app ,extension_logger ,run_dir
     app = k
+    extension_logger = ext_logger
+    run_dir = run_d
+    with open(run_dir+"/init.json","r",encoding="utf-8") as f:
+        json.load(f)
+    @app.route("/extension/main.basic.english.reading/show_articles")
+    def show_articles():
+        concert = request.args.get("name")
+        with open(f"{os.getcwd()}/data/Articles/English/{concert}.txt","r") as f:
+            a = (f.read())
+            a = re.sub(letters,"",a)
+            print(a)
+            a = a.split("\n")
+            return render_template("reading.html",a = a)
 
-@app.route("/extension/main.basic.english.reading/show_articles")
-def show_articles():
-    concert = request.args.get("name")
-    with open(f"{os.getcwd()}/data/Articles/English/{concert}.txt","r") as f:
-        a = (f.read())
-        a = re.sub(letters,"",a)
-        print(a)
-        a = a.split("\n")
-        return render_template("reading.html",a = a)
-
+    extension_logger.info("Load main.basic.english.reading successfully!")
 
 if __name__ == "__main__":
     app.run(debug=True,host="0.0.0.0")
