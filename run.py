@@ -17,7 +17,7 @@ main_logger.addHandler(fh)
 main_logger.addHandler(ch)
 # 创建应用实例
 app = Flask(__name__,template_folder="./templates",static_folder="./static")
-
+ 
 # 载入拓展
 main_logger.info("载入拓展...")
 try:
