@@ -10,7 +10,7 @@ fh = logging.FileHandler(logfile, mode='w',encoding='utf-8')  # open的打开模
 fh.setLevel(logging.INFO)  # 输出到file的log等级的开关
 ch = logging.StreamHandler()
 ch.setLevel(logging.WARNING)   # 输出到console的log等级的开关
-formatter = logging.Formatter("%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s")
+formatter = logging.Formatter("%(asctime)s - %(filename)s(%(name)s)[line:%(lineno)d] - %(levelname)s: %(message)s")
 fh.setFormatter(formatter)
 ch.setFormatter(formatter)
 main_logger.addHandler(fh)

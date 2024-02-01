@@ -25,7 +25,6 @@ def init(f:logging.FileHandler,c:logging.StreamHandler,fl:flask.Flask):
     ch = c
     sys.path.append(os.path.abspath(os.path.split(__file__)[0]+"/../"))
     __is_init__ = True
-    app = fl
 
 def ext_checker():
     global import_ext , app ,fh , ch
@@ -46,7 +45,7 @@ def ext_checker():
             import_ext[json_data["data"][i]["packge_name"]] = importlib.import_module(json_data["data"][i]["init_name"])
             ext_list.append(json_data["data"][i]["packge_name"])
             try:
-                import_ext[json_data["data"][i]["packge_name"]].init(app)
+                import_ext[json_data["data"][i]["packge_name"]].init(app,fh,ch)
             except AttributeError:
                 extension_logger.warning("模块 {ext}  未定义init方法".format(ext=json_data["data"][i]["packge_name"]))
         extension_logger.info("导入完成！")

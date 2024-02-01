@@ -1,6 +1,7 @@
-2024-01-30 10:15:52,483 - run.py[line:22] - INFO: 载入拓展...
-2024-01-30 10:15:52,494 - init.py[line:34] - INFO: 距离上一次检查更新过去了19天,即将开始本次检查...
-2024-01-30 10:15:52,495 - init.py[line:36] - INFO: 检查成功
-2024-01-30 10:15:52,495 - init.py[line:38] - INFO: 写入json成功
-2024-01-30 10:15:52,495 - init.py[line:41] - INFO: 正在导入第1个(main.basic.english.reading),共1个
-2024-01-30 10:15:54,685 - init.py[line:48] - INFO: 导入完成！
+2024-01-31 10:25:15,143 - run.py(MAIN)[line:22] - INFO: 载入拓展...
+2024-01-31 10:25:15,156 - init.py(EXT(extensions_loader))[line:38] - INFO: 距离上一次检查更新过去了20天,即将开始本次检查...
+2024-01-31 10:25:15,156 - init.py(EXT(extensions_loader))[line:40] - INFO: 检查成功
+2024-01-31 10:25:15,156 - init.py(EXT(extensions_loader))[line:42] - INFO: 写入json成功
+2024-01-31 10:25:15,156 - init.py(EXT(extensions_loader))[line:45] - INFO: 正在导入第1个(main.basic.english.reading),共1个
+2024-01-31 10:25:17,225 - main.py(EXT(main.basic.english.reading))[line:32] - INFO: Load main.basic.english.reading successfully!
+2024-01-31 10:25:17,225 - init.py(EXT(extensions_loader))[line:52] - INFO: 导入完成！
