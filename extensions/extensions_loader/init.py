@@ -5,6 +5,7 @@ import logging
 import sys
 import flask
 import importlib
+from . import utils 
 
 __is_init__ = False
 extension_logger = logging.getLogger('EXT(extensions_loader)')
@@ -23,6 +24,7 @@ def init(f:logging.FileHandler,c:logging.StreamHandler,fl:flask.Flask):
     extension_logger.addHandler(f)
     fh = f
     ch = c
+    app = fl
     sys.path.append(os.path.abspath(os.path.split(__file__)[0]+"/../"))
     __is_init__ = True
 
@@ -45,7 +47,7 @@ def ext_checker():
             import_ext[json_data["data"][i]["packge_name"]] = importlib.import_module(json_data["data"][i]["init_name"])
             ext_list.append(json_data["data"][i]["packge_name"])
             try:
-                import_ext[json_data["data"][i]["packge_name"]].init(app,fh,ch)
+                import_ext[json_data["data"][i]["packge_name"]].init(utils.ToExts(app,fh,ch))
             except AttributeError:
                 extension_logger.warning("模块 {ext}  未定义init方法".format(ext=json_data["data"][i]["packge_name"]))
         extension_logger.info("导入完成！")

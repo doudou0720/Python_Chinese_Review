@@ -85,5 +85,6 @@ def show_extensions_more(name):
 logging.info("程序拓展启动完成!")
 # 启动实施（只在当前模块运行）
 if __name__ == '__main__':
+    print("MAIN ID:",id(app))
     # app.run(debug=True,port=5000,host="0.0.0.0",ssl_context='adhoc')
     app.run(debug=True,port=5000,host="0.0.0.0")
