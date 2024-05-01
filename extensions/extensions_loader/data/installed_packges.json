@@ -1,11 +1,11 @@
 {
-    "version" : 1,
-    "last_check_date" : "2024-1-11",
-    "data":[
+    "version": 1,
+    "last_check_date": "2024-05-01",
+    "data": [
         {
-            "packge_name":"main.basic.english.reading",
-            "check_url":"",
-            "init_name":"main.english.reading"
+            "packge_name": "main.basic.english.reading",
+            "check_url": "",
+            "init_name": "main.english.reading"
         }
     ]
 }

@@ -16,7 +16,7 @@ def init(k:Flask,ext_logger:logging.Logger,run_d:str):
     run_dir = run_d
     with open(run_dir+"/init.json","r",encoding="utf-8") as f:
         json.load(f)
-    @app.route(rule="/extension/main.basic.english.reading/show_articles")
+    @app.route("/extension/main.basic.english.reading/show_articles")
     def show_articles():
         concert = request.args.get("name")
         with open(f"{os.getcwd()}/data/Articles/English/{concert}.txt","r") as f:
