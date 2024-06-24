@@ -43,6 +43,9 @@ def ext_checker():
             json_data['last_check_date'] = datetime.datetime.now().strftime('%Y-%m-%d')
             f.write(json.dumps(json_data))
             extension_logger.info("写入json成功")
+        else:
+            f.write(json.dumps(json_data))
+            extension_logger.info("距离上次更新时间间隔较短,暂不检查\n若想立即检查,请至设置中计划下次更新")
     length = len(json_data['data'])
     for i in range(length):
         extension_logger.info("正在导入第{n}个({name}),共{m}个".format(n = i+1,m = length,name=json_data["data"][i]["packge_name"]))

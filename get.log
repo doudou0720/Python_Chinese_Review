@@ -1,5 +1,0 @@
-2022-09-18 11:10:22 root:ERROR:can only concatenate str (not "int") to str
-Traceback (most recent call last):
-  File "d:\code_projects\python\python_error_remind\get.py", line 6, in get_mp3
-    url = "https://hanyu-word-pinyin-short.cdn.bcebos.com/"+name
-TypeError: can only concatenate str (not "int") to str

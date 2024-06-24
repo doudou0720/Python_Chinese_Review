@@ -26,7 +26,7 @@ try:
     extensions_loader.ext_checker()
 except Exception as e:
     main_logger.exception(e)
-    main_logger.critical("扩展列表存在问题!程序自动终止，请向作者进行反馈!")
+    main_logger.critical("扩展加载存在问题!程序自动终止，请向作者进行反馈!")
     exit(-1)
 # 视图函数（路由）
 @app.route('/home')#主页
