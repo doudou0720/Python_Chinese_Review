@@ -21,10 +21,13 @@ def init(k:Flask,ext_logger:logging.Logger,run_d:str):
         concert = request.args.get("name")
         with open(f"{os.getcwd()}/data/Articles/English/{concert}.txt","r") as f:
             a = (f.read())
+            b = []
             a = re.sub(letters,"",a)
-            print(a)
+            # print(a)
             a = a.split("\n")
-            return render_template("reading.html",a = a)
+            for i in a:
+                b.append(i.split(" "))
+            return render_template("extensions/main/english/reading/reading.html",a = b)
 
     extension_logger.info("Load main.basic.english.reading successfully!")
 

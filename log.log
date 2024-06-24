@@ -1,0 +1,6 @@
+2024-06-24 22:08:03,956 - run.py(MAIN)[line:22] - INFO: 载入拓展...
+2024-06-24 22:08:04,129 - init.py(EXT(extensions_loader))[line:48] - INFO: 距离上次更新时间间隔较短,暂不检查
+若想立即检查,请至设置中计划下次更新
+2024-06-24 22:08:04,130 - init.py(EXT(extensions_loader))[line:51] - INFO: 正在导入第1个(main.basic.english),共1个
+2024-06-24 22:08:04,157 - reading.py(EXT(main.basic.english))[line:32] - INFO: Load main.basic.english.reading successfully!
+2024-06-24 22:08:04,157 - init.py(EXT(extensions_loader))[line:58] - INFO: 导入完成！

@@ -11,25 +11,37 @@
           <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
         <![endif]-->
         <script>
-            function sclect(){
-                var is = event.currentTarget;
-                console.log(event.currentTarget.id)
-            }
+          function buttonClick(){  
+            event.target.className="btn text-nowrap btn-outline-primary";  
+            document.getElementById("temp-show-cam-dict").href="https://dictionary.cambridge.org/dictionary/english-chinese-simplified/"+event.target.innerHTML;
+            document.getElementById("temp-show-cam-dict").innerHTML="点击前往dictionary.cambridge.org查询:"+event.target.innerHTML
+        }  
         </script>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
         <script src="{{ url_for('static',filename='js/bootstrap.bundle.js') }}"></script>
         <title>Reading</title>
     </head>
     <body>
-        <div class="col-7">
+      <div class="container">
+      <div class="row">
+        <div class="col-6">
       {%for i in a%}
         {%for b in i%}
-        <a id="{{b}}" onclick="sclect()">{{b}}</a>
+        <button type="button" class="btn text-nowrap" onclick="buttonClick()">{{b}}</button>
         {% endfor %}<br>
       {% endfor %}
         </div>
-        <div class="col">
-            <iframe src=""></iframe>
+        <div class="col-4">
+          <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
+            <p>词汇查询由<a href="https://dictionary.cambridge.org/zhs">Cambridge Dictionary</a>提供</p>
+            <div class="alert alert-warning" role="alert">
+              由于iframe限制,请自行前往其网站查询
+            </div>
+            <a id="temp-show-cam-dict"></a>
+          </div>
+            <!-- <iframe id="show_word" src=""></iframe> -->
         </div>
+      </div>
+      </div>
     </body>
 </html>
