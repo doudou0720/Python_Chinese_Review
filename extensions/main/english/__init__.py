@@ -1,6 +1,6 @@
 import os
 import flask
-from . import reading
+from . import reading,dictionary
 import logging
 
 extension_logger = logging.Logger
@@ -14,3 +14,4 @@ def init(receive_obj):
         extension_logger.error("未找到JSON文件，该拓展将不会被加载!")
         return
     reading.init(receive_obj.app,extension_logger,run_dir)
+    dictionary.init(receive_obj.app,extension_logger,run_dir)

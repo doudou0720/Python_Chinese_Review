@@ -14,8 +14,6 @@ def init(k:Flask,ext_logger:logging.Logger,run_d:str):
     app = k
     extension_logger = ext_logger
     run_dir = run_d
-    with open(run_dir+"/init.json","r",encoding="utf-8") as f:
-        json.load(f)
     @app.route("/extension/main.basic.english.reading/show_articles")
     def show_articles():
         concert = request.args.get("name")

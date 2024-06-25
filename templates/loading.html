@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
-        <meta charset="UTF-8">
-        <!-- 以最高版本的IE浏览器来渲染 -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- 视口的设置：视口的宽度和设备一致，默认的缩放比例和PC端一致，用户不能自行缩放 -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--[if lt IE 9]>
-          <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-        <![endif]-->
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
-        <script src="{{ url_for('static',filename='js\bootstrap.bundle.js') }}"></script>
-        <title>Test</title>
-    </head>
-    <body>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">75</div>
-        </div>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 以最高版本的IE浏览器来渲染 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- 视口的设置：视口的宽度和设备一致，默认的缩放比例和PC端一致，用户不能自行缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='css/bootstrap.min.css') }}"
+    />
+    <script src="{{ url_for('static',filename='js\bootstrap.bundle.js') }}"></script>
+    <title>Test</title>
+  </head>
+  <body>
+    <div class="progress">
+      <div
+        class="progress-bar progress-bar-striped progress-bar-animated"
+        role="progressbar"
+        aria-valuenow="75"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        style="width: 75%"
+      >
+        75
+      </div>
+    </div>
+  </body>
 </html>
