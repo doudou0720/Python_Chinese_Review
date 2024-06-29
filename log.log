@@ -1,8 +1,7 @@
-2024-06-28 16:10:55,693 - run.py(MAIN)[line:22] - INFO: 载入拓展...
-2024-06-28 16:10:55,733 - init.py(EXT(extensions_loader))[line:48] - INFO: 距离上次更新时间间隔较短,暂不检查
+2024-06-28 20:23:55,769 - run.py(MAIN)[line:22] - INFO: 载入拓展...
+2024-06-28 20:23:55,785 - init.py(EXT(extensions_loader))[line:48] - INFO: 距离上次更新时间间隔较短,暂不检查
 若想立即检查,请至设置中计划下次更新
-2024-06-28 16:10:55,734 - init.py(EXT(extensions_loader))[line:51] - INFO: 正在导入第1个(main.basic.english),共1个
-2024-06-28 16:11:01,001 - reading.py(EXT(main.basic.english))[line:30] - INFO: Load main.basic.english.reading successfully!
-2024-06-28 16:11:01,004 - dictionary.py(EXT(main.basic.english))[line:37] - WARNING: Cannot find DataBase , try to download it from https://github.com/skywind3000/ECDICT/releases/download/1.0.28/ecdict-sqlite-28.zip
-2024-06-28 16:11:01,004 - dictionary.py(EXT(main.basic.english))[line:38] - INFO: [For countries that cannot connect to Github]If the download is too slow, you can try to download it manually by saving it under /root/Python_Chinese_Review/extensions/main/english/temp_dict
-2024-06-28 16:11:01,005 - dictionary.py(EXT(main.basic.english))[line:39] - INFO: [For countries that cannot connect to Github]如果下载速度过慢，你可以尝试手动下载，保存到/root/Python_Chinese_Review/extensions/main/english/temp_dict下
+2024-06-28 20:23:55,786 - init.py(EXT(extensions_loader))[line:51] - INFO: 正在导入第1个(main.basic.english),共1个
+2024-06-28 20:23:56,074 - reading.py(EXT(main.basic.english))[line:30] - INFO: Load main.basic.english.reading successfully!
+2024-06-28 20:23:56,079 - dictionary.py(EXT(main.basic.english))[line:143] - INFO: Load main.basic.english.dictionary successfully!
+2024-06-28 20:23:56,079 - init.py(EXT(extensions_loader))[line:58] - INFO: 导入完成！

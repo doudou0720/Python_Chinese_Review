@@ -87,4 +87,4 @@ logging.info("程序拓展启动完成!")
 if __name__ == '__main__':
     print("MAIN ID:",id(app))
     # app.run(debug=True,port=5000,host="0.0.0.0",ssl_context='adhoc')
-    app.run(debug=True,port=5000,host="0.0.0.0")
+    app.run(debug=True,port=8000,host="0.0.0.0",use_reloader = False)
