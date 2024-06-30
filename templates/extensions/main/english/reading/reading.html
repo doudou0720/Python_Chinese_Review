@@ -14,10 +14,12 @@
   <script>
     function buttonClick() {
       event.target.className = "btn text-nowrap btn-outline-primary";
-      document.getElementById("temp-show-cam-dict").href = "https://dictionary.cambridge.org/dictionary/english-chinese-simplified/" + event.target.innerHTML;
-      document.getElementById("temp-show-cam-dict").innerHTML = "点击前往dictionary.cambridge.org查询:" + event.target.innerHTML
+      document.getElementById("show_word").src = "http://192.168.16.246:8000/extension/main.basic.english.dictionary/s/" + event.target.innerHTML;
     }  
   </script>
+  <style>
+    iframe {margin-left: 0px;margin-top: 0px;margin-right: 0px;margin-bottom: 0px;overflow: hidden;}
+  </style>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
   <script src="{{ url_for('static',filename='js/bootstrap.bundle.js') }}"></script>
   <title>Reading</title>
@@ -33,15 +35,11 @@
         {% endfor %}<br>
         {% endfor %}
       </div>
-      <div class="col-4">
+      <div class="col-6">
         <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
-          <p>词汇查询由<a href="https://dictionary.cambridge.org/zhs">Cambridge Dictionary</a>提供</p>
-          <div class="alert alert-warning" role="alert">
-            由于iframe限制,请自行前往其网站查询
-          </div>
-          <a id="temp-show-cam-dict"></a>
+          <p>词汇查询由<a href="https://github.com/skywind3000/ECDICT">[Github] skywind3000/ECDICT</a>提供</p>
         </div>
-        <!-- <iframe id="show_word" src=""></iframe> -->
+        <iframe id="show_word" src=""  width='100%' height='100%' frameborder='0'></iframe>
       </div>
     </div>
   </div>

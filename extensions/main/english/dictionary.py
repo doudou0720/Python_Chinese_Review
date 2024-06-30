@@ -1,9 +1,7 @@
 import logging
-import time
-import progressbar
+import time 
 from flask import Flask,render_template,request,url_for,redirect
 import requests
-import tqdm
 try:
     import stardict
 except:
@@ -17,7 +15,6 @@ run_dir = ""
 json_info = {}
 # from run import app
 app = Flask
-import urllib.request
 def download_files(url,name):
     global extension_logger
     filepath = "./extensions/main/english/"+name
@@ -96,11 +93,16 @@ def init(k:Flask,ext_logger:logging.Logger,run_d:str):
         
     @app.route("/extension/main.basic.english.dictionary/")
     def home():
-        return render_template("Scratch.html")
+        return render_template("extensions/main/english/dictionary/Scratch.html")
     @app.route("/extension/main.basic.english.dictionary/s/<word>/")
     def seratch(word):
         global cl
-        word = str(word)
+        word_c = str(word)
+        word = ""
+        rem = []
+        for i in range(len(word_c)):
+            if word_c[i].lower() in "abcdefghijklmnopqrstuvwxyz'":
+                word += word_c[i].lower()
         ru = stardict.StarDict(cl,True).match(word,strip=True)
         other = stardict.StarDict(cl,True).query(word)
         ru2 = []
@@ -134,12 +136,12 @@ def init(k:Flask,ext_logger:logging.Logger,run_d:str):
             tag = other["tag"].split(" ")
         except:
             tag = []
-        return render_template("result.html",rl = ru2,definition = c_list_e,translation = c_list_c,word = other["word"],id = other["id"],exchange = nexchange,tag=tag)
+        return render_template("extensions/main/english/dictionary/result.html",rl = ru2,definition = c_list_e,translation = c_list_c,word = other["word"],id = other["id"],exchange = nexchange,tag=tag)
 
     @app.route("/extension/main.basic.english.dictionary/jump/")
     def jump():
         a = request.values.get("word")
-        return redirect("/s/"+str(a))
+        return redirect("/extension/main.basic.english.dictionary/s/"+str(a))
     extension_logger.info("Load main.basic.english.dictionary successfully!")
 
 if __name__ == "__main__":
