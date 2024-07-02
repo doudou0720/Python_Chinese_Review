@@ -1,2 +1,2 @@
-# Python_Chinese_Review
+# Python_Chinese_Review(WIP)
 Maybe it's only designed for Chinese Student...
