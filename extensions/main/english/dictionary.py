@@ -96,7 +96,7 @@ def init(k:Flask,ext_logger:logging.Logger,run_d:str):
         return render_template("extensions/main/english/dictionary/Scratch.html")
     @app.route("/extension/main.basic.english.dictionary/s/<word>/")
     def seratch(word):
-        global cl
+        global cl,extension_logger
         word_c = str(word)
         word = ""
         rem = []
@@ -136,12 +136,30 @@ def init(k:Flask,ext_logger:logging.Logger,run_d:str):
             tag = other["tag"].split(" ")
         except:
             tag = []
-        return render_template("extensions/main/english/dictionary/result.html",rl = ru2,definition = c_list_e,translation = c_list_c,word = other["word"],id = other["id"],exchange = nexchange,tag=tag)
+        try:
+            is_simple = request.args.get("is_simple")
+            if is_simple.lower() == "true":
+                is_simple = True
+            elif is_simple.lower() == "false":
+                is_simple = False
+            else:
+                extension_logger.error("Invalid input on value 'is_simple': "+is_simple)
+                extension_logger.warning("Set 'is_simple' to False")
+                is_simple = False
+        except Exception as e:
+            extension_logger.warning("CANNOT get 'is_simple' , See the error below:\n"+e)
+            is_simple = False
+        return render_template("extensions/main/english/dictionary/result.html",rl = ru2,definition = c_list_e,translation = c_list_c,word = other["word"],id = other["id"],exchange = nexchange,tag=tag,is_simple=is_simple)
 
     @app.route("/extension/main.basic.english.dictionary/jump/")
     def jump():
+        try:
+            is_simple = request.args.get("is_simple")
+        except Exception as e:
+            extension_logger.warning("CANNOT get 'is_simple' , See the error below:\n"+e)
+            is_simple = "False"
         a = request.values.get("word")
-        return redirect("/extension/main.basic.english.dictionary/s/"+str(a))
+        return redirect("/extension/main.basic.english.dictionary/s/"+str(a)+"?is_simple="+str(is_simple))
     extension_logger.info("Load main.basic.english.dictionary successfully!")
 
 if __name__ == "__main__":

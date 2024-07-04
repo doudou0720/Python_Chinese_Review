@@ -14,7 +14,7 @@
   <script>
     function buttonClick() {
       event.target.className = "btn text-nowrap btn-outline-primary";
-      document.getElementById("show_word").src = "http://192.168.16.246:8000/extension/main.basic.english.dictionary/s/" + event.target.innerHTML;
+      document.getElementById("show_word").src = "/extension/main.basic.english.dictionary/s/" + event.target.innerHTML + "?is_simple=True";
       document.getElementById("temp-show-cam-dict").href = "https://dictionary.cambridge.org/dictionary/english-chinese-simplified/" + event.target.innerHTML;
       document.getElementById("temp-show-cam-dict").innerHTML = "点击前往dictionary.cambridge.org查询:" + event.target.innerHTML    
     }  

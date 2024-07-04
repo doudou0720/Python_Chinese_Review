@@ -1,14 +1,7 @@
-2024-07-02 13:52:41,201 - run.py(MAIN)[line:22] - INFO: 载入拓展...
-2024-07-02 13:52:41,273 - init.py(EXT(extensions_loader))[line:48] - INFO: 距离上次更新时间间隔较短,暂不检查
+2024-07-04 09:33:26,591 - run.py(MAIN)[line:22] - INFO: 载入拓展...
+2024-07-04 09:33:26,607 - init.py(EXT(extensions_loader))[line:48] - INFO: 距离上次更新时间间隔较短,暂不检查
 若想立即检查,请至设置中计划下次更新
-2024-07-02 13:52:41,277 - init.py(EXT(extensions_loader))[line:51] - INFO: 正在导入第1个(main.basic.english),共1个
-2024-07-02 13:52:42,116 - reading.py(EXT(main.basic.english))[line:30] - INFO: Load main.basic.english.reading successfully!
-2024-07-02 13:52:42,117 - dictionary.py(EXT(main.basic.english))[line:64] - WARNING: Cannot find DataBase , try to download it from https://github.com/skywind3000/ECDICT/releases/download/1.0.28/ecdict-sqlite-28.zip
-2024-07-02 13:52:42,118 - dictionary.py(EXT(main.basic.english))[line:65] - INFO: [For countries that cannot connect to Github]If the download is too slow, you can try to download it manually by saving it under D:\E-drive-12031\My_place\Github\Python_Chinese_Review\extensions\main\english/temp_dict
-2024-07-02 13:52:42,119 - dictionary.py(EXT(main.basic.english))[line:66] - INFO: [For countries that cannot connect to Github]如果下载速度过慢，你可以尝试手动下载，保存到D:\E-drive-12031\My_place\Github\Python_Chinese_Review\extensions\main\english/temp_dict下
-2024-07-02 13:53:14,818 - dictionary.py(EXT(main.basic.english))[line:77] - INFO: Download 'ecdict-sqlite-28.zip' from https://github.moeyy.xyz/https://github.com/skywind3000/ECDICT/releases/download/1.0.28/ecdict-sqlite-28.zip
-2024-07-02 13:53:16,918 - dictionary.py(EXT(main.basic.english))[line:31] - INFO: [Download Progress] Start download,[File size]:206.72 MB
-2024-07-02 13:55:26,458 - dictionary.py(EXT(main.basic.english))[line:42] - INFO: Download completed!,times: 131.64秒
-2024-07-02 13:55:27,155 - dictionary.py(EXT(main.basic.english))[line:87] - INFO: 解压zip文件...
-2024-07-02 13:55:54,260 - dictionary.py(EXT(main.basic.english))[line:145] - INFO: Load main.basic.english.dictionary successfully!
-2024-07-02 13:55:54,315 - init.py(EXT(extensions_loader))[line:58] - INFO: 导入完成！
+2024-07-04 09:33:26,607 - init.py(EXT(extensions_loader))[line:51] - INFO: 正在导入第1个(main.basic.english),共1个
+2024-07-04 09:33:26,831 - reading.py(EXT(main.basic.english))[line:30] - INFO: Load main.basic.english.reading successfully!
+2024-07-04 09:33:26,837 - dictionary.py(EXT(main.basic.english))[line:163] - INFO: Load main.basic.english.dictionary successfully!
+2024-07-04 09:33:26,837 - init.py(EXT(extensions_loader))[line:58] - INFO: 导入完成！
