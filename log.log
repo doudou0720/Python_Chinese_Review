@@ -1,7 +1,7 @@
-2024-07-04 10:55:09,610 - run.py(MAIN)[line:22] - INFO: 载入拓展...
-2024-07-04 10:55:09,638 - init.py(EXT(extensions_loader))[line:48] - INFO: 距离上次更新时间间隔较短,暂不检查
+2024-07-05 12:32:39,492 - run.py(MAIN)[line:22] - INFO: 载入拓展...
+2024-07-05 12:32:39,508 - init.py(EXT(extensions_loader))[line:48] - INFO: 距离上次更新时间间隔较短,暂不检查
 若想立即检查,请至设置中计划下次更新
-2024-07-04 10:55:09,639 - init.py(EXT(extensions_loader))[line:51] - INFO: 正在导入第1个(main.basic.english),共1个
-2024-07-04 10:55:09,965 - reading.py(EXT(main.basic.english))[line:30] - INFO: Load main.basic.english.reading successfully!
-2024-07-04 10:55:09,973 - dictionary.py(EXT(main.basic.english))[line:163] - INFO: Load main.basic.english.dictionary successfully!
-2024-07-04 10:55:09,973 - init.py(EXT(extensions_loader))[line:58] - INFO: 导入完成！
+2024-07-05 12:32:39,508 - init.py(EXT(extensions_loader))[line:51] - INFO: 正在导入第1个(main.basic.english),共1个
+2024-07-05 12:32:39,733 - reading.py(EXT(main.basic.english))[line:42] - INFO: Load main.basic.english.reading successfully!
+2024-07-05 12:32:39,739 - dictionary.py(EXT(main.basic.english))[line:165] - INFO: Load main.basic.english.dictionary successfully!
+2024-07-05 12:32:39,741 - init.py(EXT(extensions_loader))[line:58] - INFO: 导入完成！

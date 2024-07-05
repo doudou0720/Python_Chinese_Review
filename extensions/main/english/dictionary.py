@@ -1,6 +1,6 @@
 import logging
 import time 
-from flask import Flask,render_template,request,url_for,redirect
+from flask import Flask,render_template,request,url_for,redirect,abort,Response
 import requests
 try:
     import stardict
@@ -53,6 +53,13 @@ def check_md5(path,md5):
         return False
     return True
 
+def deal_single_word(word_c):
+    word_c = str(word_c)
+    word = ""
+    for i in range(len(word_c)):
+        if word_c[i].lower() in "abcdefghijklmnopqrstuvwxyz'":
+            word += word_c[i].lower()
+    return word
 
 cl = r'./extensions/main/english/stardict.db'
 def init(k:Flask,ext_logger:logging.Logger,run_d:str):
@@ -97,12 +104,7 @@ def init(k:Flask,ext_logger:logging.Logger,run_d:str):
     @app.route("/extension/main.basic.english.dictionary/s/<word>/")
     def seratch(word):
         global cl,extension_logger
-        word_c = str(word)
-        word = ""
-        rem = []
-        for i in range(len(word_c)):
-            if word_c[i].lower() in "abcdefghijklmnopqrstuvwxyz'":
-                word += word_c[i].lower()
+        word = deal_single_word(word)
         ru = stardict.StarDict(cl,True).match(word,strip=True)
         other = stardict.StarDict(cl,True).query(word)
         ru2 = []
@@ -161,6 +163,31 @@ def init(k:Flask,ext_logger:logging.Logger,run_d:str):
         a = request.values.get("word")
         return redirect("/extension/main.basic.english.dictionary/s/"+str(a)+"?is_simple="+str(is_simple))
     extension_logger.info("Load main.basic.english.dictionary successfully!")
+
+    # "get"下属于技术性网址，供其他模块使用
+    @app.route("/extension/main.basic.english.dictionary/get/root")
+    def get_root():
+        global deal_single_word
+        try:
+            word = request.args.get("word")
+            word = deal_single_word(word)
+            other = stardict.StarDict(cl,True).query(word)
+        except Exception as e:
+            return Response(str(e),404)
+        try:
+            exchange = other["exchange"].split("/")
+        except:
+            exchange = []
+        nexchange = []
+        if exchange == []:
+            nexchange = ["暂无数据"]
+        else:
+            for i in exchange:
+                nexchange.append(i.split(":"))
+        for i in nexchange:
+            if i[0] == '0':
+                return i[1]
+        return word
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
