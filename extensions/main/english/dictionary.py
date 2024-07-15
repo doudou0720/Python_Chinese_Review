@@ -57,7 +57,7 @@ def deal_single_word(word_c):
     word_c = str(word_c)
     word = ""
     for i in range(len(word_c)):
-        if word_c[i].lower() in "abcdefghijklmnopqrstuvwxyz'":
+        if word_c[i].lower() in "abcdefghijklmnopqrstuvwxyz'-":
             word += word_c[i].lower()
     return word
 
@@ -110,6 +110,7 @@ def init(k:Flask,ext_logger:logging.Logger,run_d:str):
         ru2 = []
         if other == None:
             print(word)
+            return "未能查询相关信息，这通常意味着这个词为政治新词，请到<a href='https://www.deepl.com/zh/translator#en/zh/"+ word +"' target='_blank'>DeepL</a>查询"
         for i in ru:
             ru2.append(i[1])
         try:

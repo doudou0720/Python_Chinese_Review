@@ -2,6 +2,7 @@ import uuid
 import json
 from flask import Flask, make_response , render_template , request ,jsonify 
 import logging
+from waitress import serve
 # 创建日志
 main_logger=logging.getLogger('MAIN')
 main_logger.setLevel(logging.INFO)
@@ -87,4 +88,5 @@ logging.info("程序拓展启动完成!")
 if __name__ == '__main__':
     print("MAIN ID:",id(app))
     # app.run(debug=True,port=5000,host="0.0.0.0",ssl_context='adhoc')
-    app.run(debug=True,port=8000,host="0.0.0.0",use_reloader = False)
+    # app.run(debug=True,port=8000,host="0.0.0.0",use_reloader = False)
+    serve(app,host="0.0.0.0",port=8000)
