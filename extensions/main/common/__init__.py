@@ -12,8 +12,8 @@ def init(receive_obj):
     if not os.path.exists(info_path):
         extension_logger.error("未找到JSON文件，该拓展将不会被加载!")
         return
-    app = Flask()
-    # app = receive_obj.app
+    # app = Flask()
+    app = receive_obj.app
 
     @app.route("/extension/main.basic.common/blank") #填空
     def blank():
