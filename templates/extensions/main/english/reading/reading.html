@@ -53,6 +53,13 @@
 
 <body>
   <div class="container-fluid">
+    <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
+      <p>词汇查询由<a href="https://github.com/skywind3000/ECDICT">[Github] skywind3000/ECDICT</a>提供</p>
+      <div class="alert alert-warning" role="alert">
+        对于部分机型，可能无法显示界面，请手动打开链接查询
+      </div>
+      <a id="temp-show-cam-dict"  target='_blank'></a>
+    </div>
     <div class="row">
       <div class="col-6">
         {%for i in a%}
@@ -62,13 +69,6 @@
         {% endfor %}
       </div>
       <div class="col-6">
-        <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
-          <p>词汇查询由<a href="https://github.com/skywind3000/ECDICT">[Github] skywind3000/ECDICT</a>提供</p>
-          <div class="alert alert-warning" role="alert">
-            对于部分机型，可能无法显示界面，请手动打开链接查询
-          </div>
-          <a id="temp-show-cam-dict"  target='_blank'></a>
-        </div>
         <iframe id="show_word" src="" width='100%' height='100%' frameborder='0'></iframe>
       </div>
     </div>
@@ -80,6 +80,7 @@
         </div>
 
     </div>
+    
 
 </body>
 

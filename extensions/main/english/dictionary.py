@@ -67,6 +67,7 @@ def init(k:Flask,ext_logger:logging.Logger,run_d:str):
     app = k
     extension_logger = ext_logger
     run_dir = run_d
+    fully = True
     if os.path.exists(cl) == False:
         extension_logger.warning("Cannot find DataBase , try to download it from https://github.com/skywind3000/ECDICT/releases/download/1.0.28/ecdict-sqlite-28.zip")
         extension_logger.info("[For countries that cannot connect to Github]If the download is too slow, you can try to download it manually by saving it under {path}/temp_dict".format(path=run_d))
@@ -79,7 +80,7 @@ def init(k:Flask,ext_logger:logging.Logger,run_d:str):
         while True:
             if cnt > 2:
                 extension_logger.error("Cannot Download Files!The dictionary part WILL NOT be loaded")
-                return
+                fully = False
             try:
                 extension_logger.info("Download 'ecdict-sqlite-28.zip' from "+url)
                 download_files(url,"ecdict-sqlite-28.zip")
@@ -90,14 +91,21 @@ def init(k:Flask,ext_logger:logging.Logger,run_d:str):
                 continue
         #zip md5校验
         if check_md5("./extensions/main/english/ecdict-sqlite-28.zip",'9bbd6a5364a1f20ca35e32870569ef8b') == False:
-            return
+            extension_logger.error("MD5 Dont match!")
+            fully = False
         extension_logger.info("解压zip文件...")
         (zipfile.ZipFile("./extensions/main/english/ecdict-sqlite-28.zip")).extractall("./extensions/main/english/")
         if check_md5("./extensions/main/english/stardict.db",'4e360fc0d9ecf602069d0cead54664c6') == False:
-            return
+            extension_logger.error("MD5 Dont match!")
+            fully = False
         os.remove("./extensions/main/english/ecdict-sqlite-28.zip")
         
-        
+    # fully = False 
+    if not fully:
+        @app.route("/extension/main.basic.english.dictionary/s/<word>/")
+        def seratch(word):
+            return "Dictionary search function is not fully loaded, some functions can not be used, please check the log to fix the problem.\n字典查询功能目前未能完全加载,部分功能无法使用,请查看日志以修复该问题\n请到<a href='https://www.deepl.com/zh/translator#en/zh/"+ word +"' target='_blank'>DeepL</a>查询"
+        return
     @app.route("/extension/main.basic.english.dictionary/")
     def home():
         return render_template("extensions/main/english/dictionary/Scratch.html")
@@ -109,7 +117,7 @@ def init(k:Flask,ext_logger:logging.Logger,run_d:str):
         other = stardict.StarDict(cl,True).query(word)
         ru2 = []
         if other == None:
-            print(word)
+            # print(word)
             return "未能查询相关信息，这通常意味着这个词为政治新词，请到<a href='https://www.deepl.com/zh/translator#en/zh/"+ word +"' target='_blank'>DeepL</a>查询"
         for i in ru:
             ru2.append(i[1])
