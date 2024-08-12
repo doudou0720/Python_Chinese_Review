@@ -13,12 +13,18 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{{ url_for('static',filename='css/bootstrap.min.css') }}"
+      href="{{ url_for('static',filename='css/bootstrap-icons.min.css') }}"
+    />
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',filename='css/bootstrap.min.css') }}"
     />
     <script src="{{ url_for('static',filename='js/bootstrap.bundle.js') }}"></script>
     <title>拓展 : {{ext["name"]}}({{ext["packge_name"]}})</title>
   </head>
   <body>
+    <a class="btn btn-light bi bi-x-lg justify-content-md-end" href="/extension" role="button">返回</a>
     <h2>{{ext["name"]}}</h2>
     <p style="color: gray; size: 5">
       版本号 {{ext["ver"]}}(内部版本号:{{ext["version_inside"]}})

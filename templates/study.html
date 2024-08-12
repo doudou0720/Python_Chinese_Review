@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- 以最高版本的IE浏览器来渲染 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- 视口的设置：视口的宽度和设备一致，默认的缩放比例和PC端一致，用户不能自行缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap-icons.min.css') }}" />
+    <style>
+        #navbar {
+            background-color: rgb(202, 130, 70);
+            transition: background-color 1s;
+        }
+
+        body {
+            background-color: rgb(244, 164, 96);
+            transition: background-color 1s;
+            font-family: FZXiaoBiaoSong-B05S;
+        }
+        @font-face {
+            font-family: LXGWWenKaiMono-Regular;
+            src: url("{{ url_for('static',filename='fonts/LXGWWenKaiMono-Regular.ttf') }}");
+        }  
+    </style>
+    <script src="{{ url_for('static',filename='js/bootstrap.bundle.js') }}"></script>
+    <title>学习</title>
+
+</head>
+
+<body>
+    <div class="d-flex justify-content-between container-fluid" id="navbar">
+        <p class="p-2">
+            <a class="btn-close" href="/home" role="button" aria-label="Close"></a>
+        </p>
+        <p class="p-2">
+            <b class="nav-link" style="size: 10px;">学习</a>
+        </p>
+        <p class="p-2">
+            <select class="form-select" id="sub" aria-label="Default select example">
+                <option value="0" selected>CN 语文</option>
+                <option value="1">MA 数学</option>
+                <option value="2">EN 英语</option>
+                <option value="3">PH 物理</option>
+                <option value="4">Che 化学</option>
+                <option value="5">LA 思想道德</option>
+                <option value="6">HI 历史</option>
+                <option value="7">BI 生物</option>
+                <option value="8">GE 地理</option>
+                <option value="9">OT 其他</option>
+            </select>
+        </p>
+    </div>
+    <br>
+    <iframe id="iframe" src="/study/CN" width="100%" height="100%" align="center" allowTransparency="true" ></iframe>
+    <script>
+        // js 处理select选择change事件
+        document.getElementById("sub").addEventListener("change", function () {
+            var Colours = ["#f4a460", "#00bfff", "#dc143c"];
+            var BackColors = ["#ca8246", "#79b4c7", "#932d41"];
+            var Links = ["CN", "MA", "EN", "PH", "Che", "LA", "HI", "BI", "GE", "OT"];
+            var obj = document.getElementById('sub'); // 定位id
+            var index = obj.selectedIndex; // 选中索引
+            var obj2 = document.getElementById('navbar');
+            var obj3 = document.getElementById('iframe');
+            obj2.style.backgroundColor = BackColors[index];
+            document.body.style.backgroundColor = Colours[index];
+            obj3.src = "/study/" + Links[index];
+            document.getElementById("iframe").contentDocument.body.style.fontFamily = "LXGWWenKaiMono-Regular";
+        })
+    </script>
+</body>
+
+</html>

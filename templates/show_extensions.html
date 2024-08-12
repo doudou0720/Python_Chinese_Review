@@ -21,9 +21,9 @@
   <body>
     {%for i in exts%}
     <div class="card">
-      <div>
+      <div class="card-body">
         <h5 class="card-title">{{i["name"]}}</h5>
-        <p style="color: gray; size: 5">版本号 {{i["ver"]}}</p>
+        <p style="color: gray; size: 5" class="card-text">版本号 {{i["ver"]}}</p>
         <a
           href="/extension/{{i['packge_name']}}"
           class="btn btn-primary"
@@ -32,6 +32,7 @@
         >
       </div>
     </div>
+    <br>
     {% endfor %}
   </body>
 </html>
