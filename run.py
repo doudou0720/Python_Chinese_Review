@@ -18,7 +18,7 @@ fh.setLevel(logging.INFO)  # 输出到file的log等级的开关
 ch = logging.StreamHandler()
 ch.setLevel(logging.WARNING)  # 输出到console的log等级的开关
 formatter = logging.Formatter(
-    "%(asctime)s - %(filename)s(%(name)s)[line:%(lineno)d] - %(levelname)s: %(message)s"
+    "%(asctime)s - (%(name)s)[File:%(filename)s(Line:%(lineno)d)] - %(levelname)s: %(message)s"
 )
 fh.setFormatter(formatter)
 ch.setFormatter(formatter)

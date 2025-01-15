@@ -1,3 +1,8 @@
+"""
+TODO:该拓展需整改
+
+英语词典
+"""
 import logging
 import time 
 from flask import Flask,render_template,request,url_for,redirect,abort,Response

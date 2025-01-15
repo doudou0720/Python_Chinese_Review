@@ -13,5 +13,5 @@ def init(receive_obj):
     if not os.path.exists(info_path):
         extension_logger.error("未找到JSON文件，该拓展将不会被加载!")
         return
-    reading.init(receive_obj.app,extension_logger,run_dir)
-    dictionary.init(receive_obj.app,extension_logger,run_dir)
+    reading.init(receive_obj.app,receive_obj.GetSubLogger(extension_logger,"Reading"),run_dir)
+    dictionary.init(receive_obj.app,receive_obj.GetSubLogger(extension_logger,"Dictionary"),run_dir)
