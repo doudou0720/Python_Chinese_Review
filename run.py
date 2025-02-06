@@ -136,8 +136,9 @@ if __name__ == "__main__":
     qr.add_data("http://" + str(ip) + ":8000/home")
     # invert=True白底黑块,有些app不识别黑底白块.
     qr.print_ascii(invert=True)
-    # qr = qrcode.QRCode()
-    # qr.add_data("http://"+str(ip)+":8000/extension/main.basic.english.reading/show_articles?id=ee85")
-    # #invert=True白底黑块,有些app不识别黑底白块.
-    # qr.print_ascii(invert=True)
+    print("The QR code below is only for test!")
+    qr = qrcode.QRCode()
+    qr.add_data("http://"+str(ip)+":8000/extension/main.basic.english.reading/show_articles?id=ee85")
+    #invert=True白底黑块,有些app不识别黑底白块.
+    qr.print_ascii(invert=True)
     serve(app, host="0.0.0.0", port=8000)

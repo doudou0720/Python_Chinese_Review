@@ -20,6 +20,9 @@
 <body>
     <div class="container">
         <h1> {{word}}</h1>
+
+
+        {%if is_simple == False%}        
         <p>
             {%for i in tag%}
             <strong style="background-color: rgb(184, 184, 184);">
@@ -35,11 +38,10 @@
         </p>
         <p style="font-size:5px;">NO.{{id}}</p>
         <br style="font-size:10px;">
-        {%if is_simple == False%}
         <div class="row">
             <div class="col-3">
                 <a class="nav-link" href="/">
-                    <<回到搜索界面< /a>
+                    <a href="../..">回到搜索界面</a>
                         <nav id="navbar-example3"
                             class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
                             <a class="navbar-brand" href="#">导航栏</a>
@@ -128,82 +130,17 @@
             <div class="col-2">
                 <p>你是不是在找:</p>
                 {%for i in rl%}
-                <a class="row" href="/s/{{i}}">{{i}}</a>
+                <a class="row" href="../../s/{{i}}">{{i}}</a>
                 {%endfor%}
-                </dir>
             </div>
             {%elif is_simple == True%}
             <div class="row">
-                <div class="col" style="background-color:rgb(221, 221, 221);">
+                <div class="col">
                     <br id="translation">
-                    <h2><a id="translation_en" href="#translation_en">英文翻译</a></h2>
-                    {%for i in definition%}
-                    <p class="row">{{i}}</p>
-                    {%endfor%}
-                    <h2><a id="translation_chs" href="#translation_chs">中文翻译</a></h2>
                     {%for i in translation%}
                     <p class="row">{{i}}</p>
                     {%endfor%}
-                    <h2><a id="exchange" href="#exchange">词形变化</a></h2>
-                    {%for i in exchange%}
-                    {%if i[0] == 'p'%}
-                    <p class="row"><strong>过去式</strong><a
-                            href="/extension/main.basic.english.dictionary/jump?word={{i[1]}}&is_simple=True">{{i[1]}}</a>
-                    </p>
-                    {%elif i[0] == 'd'%}
-                    <p class="row"><strong>过去分词</strong><a
-                            href="/extension/main.basic.english.dictionary/jump?word={{i[1]}}&is_simple=True">{{i[1]}}</a>
-                    </p>
-                    {%elif i[0] == 'i'%}
-                    <p class="row"><strong>现在分词</strong><a
-                            href="/extension/main.basic.english.dictionary/jump?word={{i[1]}}&is_simple=True">{{i[1]}}</a>
-                    </p>
-                    {%elif i[0] == '3'%}
-                    <p class="row"><strong>第三人称单数</strong><a
-                            href="/extension/main.basic.english.dictionary/jump?word={{i[1]}}&is_simple=True">{{i[1]}}</a>
-                    </p>
-                    {%elif i[0] == 'r'%}
-                    <p class="row"><strong>形容词比较级</strong><a
-                            href="/extension/main.basic.english.dictionary/jump?word={{i[1]}}&is_simple=True">{{i[1]}}</a>
-                    </p>
-                    {%elif i[0] == 't'%}
-                    <p class="row"><strong>形容词最高级</strong><a
-                            href="/extension/main.basic.english.dictionary/jump?word={{i[1]}}&is_simple=True">{{i[1]}}</a>
-                    </p>
-                    {%elif i[0] == 's'%}
-                    <p class="row"><strong>名词复数形式</strong><a
-                            href="/extension/main.basic.english.dictionary/jump?word={{i[1]}}&is_simple=True">{{i[1]}}</a>
-                    </p>
-                    {%elif i[0] == '0'%}
-                    <p class="row"><strong>词根</strong><a
-                            href="/extension/main.basic.english.dictionary/jump?word={{i[1]}}&is_simple=True">{{i[1]}}</a>
-                    </p>
-                    {%elif i[0] == '1'%}
-                    <p class="row"><strong>词根关系</strong>
-                        {%for n in i[1]%}
-                        {%if n == 'p'%}
-                    <p class="row">过去式</p>
-                    {%elif n == 'd'%}
-                    <p class="row">过去分词</p>
-                    {%elif n == 'i'%}
-                    <p class="row">现在分词</p>
-                    {%elif n == '3'%}
-                    <p class="row">第三人称单数</p>
-                    {%elif n == 'r'%}
-                    <p class="row">形容词比较级</p>
-                    {%elif n == 't'%}
-                    <p class="row">形容词最高级</p>
-                    {%elif n == 's'%}
-                    <p class="row">名词复数形式</p>
-                    {%elif n == '0'%}
-                    <p class="row">词根</p>
-                    {%endif%}
-                    {%endfor%}
-                    </p>
-                    {%else%}
-                    <p class="row">暂无数据</p>
-                    {%endif%}
-                    {%endfor%}
+                    <p>See <a href="../../s/{{word}}?is_simple=False" target="_blank">here</a> for more details.</p>
                 </div>
             </div>
             {%endif%}

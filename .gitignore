@@ -1,4 +1,4 @@
 extensions/main/english/stardict.db
 log.log
-PCR/*
+.venv/*
 *.pyc

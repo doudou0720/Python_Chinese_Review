@@ -12,28 +12,55 @@
           <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
         <![endif]-->
   <script>
+    function buttonReset(word) {
+      // alert(word.dataset.status)
+      if (word.className == "btn text-nowrap btn-outline-primary btn-sm") {
+        if (word.dataset.status == 3) {
+          word.className = "btn text-nowrap btn-outline-secondary btn-sm";
+          word.dataset.status = 2
+        } else {
+          word.className = "btn text-nowrap btn-sm";
+          word.dataset.status = 0
+        }
+      }
+    }
     function buttonClick() {
-      event.target.className = "btn text-nowrap btn-outline-primary btn-sm";
-      document.getElementById("show_word").src = "/extension/main.basic.english.dictionary/s/" + event.target.innerHTML + "?is_simple=True";
-      document.getElementById("temp-show-cam-dict").href = "https://dictionary.cambridge.org/dictionary/english-chinese-simplified/" + event.target.innerHTML;
-      document.getElementById("temp-show-cam-dict").innerHTML = "点击前往dictionary.cambridge.org查询:" + event.target.innerHTML
-    }  
+      if (event.target.dataset.status == 0) {
+        event.target.className = "btn text-nowrap btn-outline-primary btn-sm";
+        event.target.dataset.status = 1;
+        setTimeout(buttonReset, 1500, event.target);
+      } else if (event.target.dataset.status == 1 || event.target.dataset.status == 3) {
+        event.target.className = "btn text-nowrap btn-outline-secondary btn-sm";
+        const offcanvasElementList = document.querySelectorAll('.offcanvas');
+        const offcanvasList = [...offcanvasElementList].map(offcanvasEl => new bootstrap.Offcanvas(offcanvasEl));
+        offcanvasList[0].show();
+        event.target.dataset.status = 2
+        document.getElementById("show_word").src = "/extension/main.basic.english.dictionary/s/" + event.target.innerHTML + "?is_simple=True";
+        document.getElementById("temp-show-cam-dict").href = "https://dictionary.cambridge.org/dictionary/english-chinese-simplified/" + event.target.innerHTML;
+        document.getElementById("temp-show-cam-dict").innerHTML = "点击前往dictionary.cambridge.org查询:" + event.target.innerHTML;
+      } else if (event.target.dataset.status == 2) {
+        event.target.className = "btn text-nowrap btn-outline-primary btn-sm";
+        event.target.dataset.status = 3
+        setTimeout(buttonReset, 1500, event.target);
+
+      }
+    }
     window.onload = (function () {
-  let progressBar = document.querySelector(".progress-bar");
-  
-  document.addEventListener("scroll", function (e) {
-    // 距顶部
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    // 可视区高度
-    var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
-    // 滚动条总高度
-    var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+      let progressBar = document.querySelector(".progress-bar");
 
-    // console.log(scrollTop, scrollHeight, clientHeight);
+      document.addEventListener("scroll", function (e) {
+        // 距顶部
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        // 可视区高度
+        var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+        // 滚动条总高度
+        var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
 
-    progressBar.style ="width: "+(+(scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100 + "%");
-  });
-});
+        // console.log(scrollTop, scrollHeight, clientHeight);
+
+        progressBar.style = "width: " + (+(scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100 + "%");
+      });
+    });
 
 
   </script>
@@ -53,34 +80,46 @@
 
 <body>
   <div class="container-fluid">
-    <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
-      <p>词汇查询由<a href="https://github.com/skywind3000/ECDICT">[Github] skywind3000/ECDICT</a>提供</p>
-      <div class="alert alert-warning" role="alert">
-        对于部分机型，可能无法显示界面，请手动打开链接查询
+    <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <p>词汇查询由<a href="https://github.com/skywind3000/ECDICT">[Github] skywind3000/ECDICT</a>提供</p>
+          <div class="alert alert-warning" role="alert">对于部分机型，可能无法显示界面，请手动打开链接查询</div>
+          <a id="temp-show-cam-dict" target='_blank'></a>
+        </div>
+
       </div>
-      <a id="temp-show-cam-dict"  target='_blank'></a>
+      <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
-    <div class="row">
-      <div class="col-6">
-        {%for i in a%}
-        {%for b in i%}
-        <button type="button" class="btn text-nowrap btn-sm" onclick="buttonClick()">{{b}}</button>
-        {% endfor %}<br>
-        {% endfor %}
+  </div>
+  <div class="row">
+    <div class="col">
+      {%for i in a%}
+      {%for b in i%}
+      <button type="button" class="btn text-nowrap btn-sm" onclick="buttonClick()" data-status=0>{{b}}</button>
+      {% endfor %}<br>
+      {% endfor %}
+    </div>
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasBottomLabel">查询结果</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="col-6">
-        <iframe id="show_word" src="" width='100%' height='100%' frameborder='0'></iframe>
+      <div class="offcanvas-body small">
+        <iframe id="show_word" src="" width='100%' height='95%' frameborder='0'></iframe>
       </div>
     </div>
   </div>
-    <div class="fixed-bottom sticky-bottom">
+  </div>
+  <div class="fixed-bottom sticky-bottom">
 
-        <div class="progress" role="progressbar" style="height: 4px" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-          <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
-        </div>
-
+    <div class="progress" role="progressbar" style="height: 4px" aria-valuenow="0" aria-valuemin="0"
+      aria-valuemax="100">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
     </div>
-    
+
+  </div>
+
 
 </body>
 

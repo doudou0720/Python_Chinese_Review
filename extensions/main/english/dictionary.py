@@ -163,7 +163,7 @@ def init(k:Flask,ext_logger:logging.Logger,run_d:str):
                 extension_logger.warning("Set 'is_simple' to False")
                 is_simple = False
         except Exception as e:
-            extension_logger.warning("CANNOT get 'is_simple' , See the error below:\n"+e)
+            extension_logger.warning("CANNOT get 'is_simple' , See the error below:\n"+str(e))
             is_simple = False
         return render_template("extensions/main/english/dictionary/result.html",rl = ru2,definition = c_list_e,translation = c_list_c,word = other["word"],id = other["id"],exchange = nexchange,tag=tag,is_simple=is_simple)
 
