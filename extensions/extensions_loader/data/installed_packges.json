@@ -1,0 +1,16 @@
+{
+    "version": 1,
+    "last_check_date": "2025-01-24",
+    "data": [
+        {
+            "packge_name": "main.basic.english",
+            "check_url": "",
+            "init_name": "main.english"
+        },
+        {
+            "packge_name": "main.basic.common",
+            "check_url": "",
+            "init_name": "main.common"
+        }
+    ]
+}

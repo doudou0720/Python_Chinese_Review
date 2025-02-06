@@ -1,0 +1,14 @@
+{
+    "json_type" : "extension.info",
+    "json_ver" : 1,
+    "ver" : "dev-01",
+    "version_inside" : -1,
+    "developer" : "main",
+    "contact" : "None",
+    "father_ext" : "main.basic" ,
+    "share_database" : "main/common" ,
+    "share_templates" : "extensions/main/common",
+    "packge_name" : "main.basic.common",
+    "name" : "通用模板",
+    "brief_introduction" : "通用模板 \nWARNING: 该拓展正处于Demo阶段，如有问题恳请及时反馈到issue"
+}
