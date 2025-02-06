@@ -1,0 +1,3005 @@
+{
+    "code": 200,
+    "data": {
+        "categoryAttributeList": [
+            {
+                "attributeName": "学段",
+                "attributeNameId": "10002",
+                "categoryId": "22",
+                "createBy": "0",
+                "createName": None,
+                "createTime": "2022-08-14T00: 02: 16",
+                "deleted": False,
+                "id": "6",
+                "oldId": None,
+                "ordered": 6,
+                "updateBy": "0",
+                "updateName": None,
+                "updateTime": "2022-08-14T00: 02: 16"
+            },
+            {
+                "attributeName": "学科",
+                "attributeNameId": "10003",
+                "categoryId": "22",
+                "createBy": "0",
+                "createName": None,
+                "createTime": "2022-08-14T00: 02: 16",
+                "deleted": False,
+                "id": "26",
+                "oldId": None,
+                "ordered": 26,
+                "updateBy": "0",
+                "updateName": None,
+                "updateTime": "2022-08-14T00: 02: 16"
+            },
+            {
+                "attributeName": "版本",
+                "attributeNameId": "10001",
+                "categoryId": "22",
+                "createBy": "0",
+                "createName": None,
+                "createTime": "2022-08-14T00: 02: 16",
+                "deleted": False,
+                "id": "46",
+                "oldId": None,
+                "ordered": 46,
+                "updateBy": "0",
+                "updateName": None,
+                "updateTime": "2022-08-14T00: 02: 16"
+            },
+            {
+                "attributeName": "模块",
+                "attributeNameId": "10013",
+                "categoryId": "22",
+                "createBy": "0",
+                "createName": None,
+                "createTime": "2022-08-14T00: 02: 16",
+                "deleted": False,
+                "id": "64",
+                "oldId": None,
+                "ordered": 64,
+                "updateBy": "0",
+                "updateName": None,
+                "updateTime": "2022-08-14T00: 02: 16"
+            }
+        ],
+        "categoryAttributeTreeList": [
+            {
+                "attributeId": "10000",
+                "attributeValue": "高中",
+                "categoryAttributeTrees": [
+                    {
+                        "attributeId": "10002",
+                        "attributeValue": "语文",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10054",
+                                "attributeValue": "部编版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10323",
+                                        "attributeValue": "必修上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 243
+                                    },
+                                    {
+                                        "attributeId": "10324",
+                                        "attributeValue": "必修下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 248
+                                    },
+                                    {
+                                        "attributeId": "10336",
+                                        "attributeValue": "选择性必修上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 312
+                                    },
+                                    {
+                                        "attributeId": "10337",
+                                        "attributeValue": "选择性必修中册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 313
+                                    },
+                                    {
+                                        "attributeId": "10338",
+                                        "attributeValue": "选择性必修下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 316
+                                    },
+                                    {
+                                        "attributeId": "10642",
+                                        "attributeValue": "一轮复习（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 913
+                                    }
+                                ],
+                                "ordered": 31
+                            }
+                        ],
+                        "ordered": 17
+                    },
+                    {
+                        "attributeId": "10003",
+                        "attributeValue": "数学",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10056",
+                                "attributeValue": "人教A版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10329",
+                                        "attributeValue": "选择性必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 273
+                                    },
+                                    {
+                                        "attributeId": "10330",
+                                        "attributeValue": "选择性必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 280
+                                    },
+                                    {
+                                        "attributeId": "10331",
+                                        "attributeValue": "选择性必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 281
+                                    },
+                                    {
+                                        "attributeId": "10340",
+                                        "attributeValue": "一轮复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 322
+                                    }
+                                ],
+                                "ordered": 78
+                            },
+                            {
+                                "attributeId": "10057",
+                                "attributeValue": "人教B版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10327",
+                                        "attributeValue": "必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 257
+                                    },
+                                    {
+                                        "attributeId": "10328",
+                                        "attributeValue": "必修第四册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 263
+                                    },
+                                    {
+                                        "attributeId": "10329",
+                                        "attributeValue": "选择性必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 273
+                                    },
+                                    {
+                                        "attributeId": "10330",
+                                        "attributeValue": "选择性必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 280
+                                    },
+                                    {
+                                        "attributeId": "10331",
+                                        "attributeValue": "选择性必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 281
+                                    }
+                                ],
+                                "ordered": 84
+                            },
+                            {
+                                "attributeId": "10061",
+                                "attributeValue": "苏教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10329",
+                                        "attributeValue": "选择性必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 273
+                                    },
+                                    {
+                                        "attributeId": "10330",
+                                        "attributeValue": "选择性必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 280
+                                    }
+                                ],
+                                "ordered": 127
+                            },
+                            {
+                                "attributeId": "10062",
+                                "attributeValue": "北师大版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10329",
+                                        "attributeValue": "选择性必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 273
+                                    },
+                                    {
+                                        "attributeId": "10330",
+                                        "attributeValue": "选择性必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 280
+                                    }
+                                ],
+                                "ordered": 137
+                            },
+                            {
+                                "attributeId": "10068",
+                                "attributeValue": "湘教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10329",
+                                        "attributeValue": "选择性必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 273
+                                    },
+                                    {
+                                        "attributeId": "10330",
+                                        "attributeValue": "选择性必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 280
+                                    }
+                                ],
+                                "ordered": 177
+                            },
+                            {
+                                "attributeId": "10898",
+                                "attributeValue": "沪教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    }
+                                ],
+                                "ordered": 229
+                            }
+                        ],
+                        "ordered": 20
+                    },
+                    {
+                        "attributeId": "10004",
+                        "attributeValue": "英语",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10055",
+                                "attributeValue": "人教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10327",
+                                        "attributeValue": "必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 257
+                                    },
+                                    {
+                                        "attributeId": "10329",
+                                        "attributeValue": "选择性必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 273
+                                    },
+                                    {
+                                        "attributeId": "10330",
+                                        "attributeValue": "选择性必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 280
+                                    },
+                                    {
+                                        "attributeId": "10331",
+                                        "attributeValue": "选择性必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 281
+                                    },
+                                    {
+                                        "attributeId": "10332",
+                                        "attributeValue": "选择性必修第四册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 285
+                                    },
+                                    {
+                                        "attributeId": "10642",
+                                        "attributeValue": "一轮复习（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 913
+                                    }
+                                ],
+                                "ordered": 45
+                            },
+                            {
+                                "attributeId": "10058",
+                                "attributeValue": "外研版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10327",
+                                        "attributeValue": "必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 257
+                                    },
+                                    {
+                                        "attributeId": "10329",
+                                        "attributeValue": "选择性必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 273
+                                    },
+                                    {
+                                        "attributeId": "10330",
+                                        "attributeValue": "选择性必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 280
+                                    },
+                                    {
+                                        "attributeId": "10331",
+                                        "attributeValue": "选择性必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 281
+                                    },
+                                    {
+                                        "attributeId": "10332",
+                                        "attributeValue": "选择性必修第四册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 285
+                                    },
+                                    {
+                                        "attributeId": "10642",
+                                        "attributeValue": "一轮复习（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 913
+                                    }
+                                ],
+                                "ordered": 98
+                            },
+                            {
+                                "attributeId": "10059",
+                                "attributeValue": "译林版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10327",
+                                        "attributeValue": "必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 257
+                                    },
+                                    {
+                                        "attributeId": "10329",
+                                        "attributeValue": "选择性必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 273
+                                    },
+                                    {
+                                        "attributeId": "10330",
+                                        "attributeValue": "选择性必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 280
+                                    },
+                                    {
+                                        "attributeId": "10331",
+                                        "attributeValue": "选择性必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 281
+                                    },
+                                    {
+                                        "attributeId": "10332",
+                                        "attributeValue": "选择性必修第四册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 285
+                                    },
+                                    {
+                                        "attributeId": "10642",
+                                        "attributeValue": "一轮复习（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 913
+                                    }
+                                ],
+                                "ordered": 105
+                            },
+                            {
+                                "attributeId": "10062",
+                                "attributeValue": "北师大版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10327",
+                                        "attributeValue": "必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 257
+                                    },
+                                    {
+                                        "attributeId": "10329",
+                                        "attributeValue": "选择性必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 273
+                                    },
+                                    {
+                                        "attributeId": "10330",
+                                        "attributeValue": "选择性必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 280
+                                    },
+                                    {
+                                        "attributeId": "10331",
+                                        "attributeValue": "选择性必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 281
+                                    },
+                                    {
+                                        "attributeId": "10332",
+                                        "attributeValue": "选择性必修第四册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 285
+                                    },
+                                    {
+                                        "attributeId": "10642",
+                                        "attributeValue": "一轮复习（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 913
+                                    }
+                                ],
+                                "ordered": 137
+                            }
+                        ],
+                        "ordered": 46
+                    },
+                    {
+                        "attributeId": "10005",
+                        "attributeValue": "物理",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10055",
+                                "attributeValue": "人教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10327",
+                                        "attributeValue": "必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 257
+                                    },
+                                    {
+                                        "attributeId": "10329",
+                                        "attributeValue": "选择性必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 273
+                                    },
+                                    {
+                                        "attributeId": "10330",
+                                        "attributeValue": "选择性必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 280
+                                    },
+                                    {
+                                        "attributeId": "10331",
+                                        "attributeValue": "选择性必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 281
+                                    },
+                                    {
+                                        "attributeId": "10340",
+                                        "attributeValue": "一轮复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 322
+                                    }
+                                ],
+                                "ordered": 45
+                            },
+                            {
+                                "attributeId": "10060",
+                                "attributeValue": "鲁科版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10327",
+                                        "attributeValue": "必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 257
+                                    },
+                                    {
+                                        "attributeId": "10329",
+                                        "attributeValue": "选择性必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 273
+                                    },
+                                    {
+                                        "attributeId": "10330",
+                                        "attributeValue": "选择性必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 280
+                                    },
+                                    {
+                                        "attributeId": "10331",
+                                        "attributeValue": "选择性必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 281
+                                    }
+                                ],
+                                "ordered": 115
+                            },
+                            {
+                                "attributeId": "10065",
+                                "attributeValue": "教科版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10327",
+                                        "attributeValue": "必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 257
+                                    },
+                                    {
+                                        "attributeId": "10329",
+                                        "attributeValue": "选择性必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 273
+                                    },
+                                    {
+                                        "attributeId": "10330",
+                                        "attributeValue": "选择性必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 280
+                                    },
+                                    {
+                                        "attributeId": "10331",
+                                        "attributeValue": "选择性必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 281
+                                    }
+                                ],
+                                "ordered": 147
+                            },
+                            {
+                                "attributeId": "10064",
+                                "attributeValue": "粤教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10327",
+                                        "attributeValue": "必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 257
+                                    },
+                                    {
+                                        "attributeId": "10329",
+                                        "attributeValue": "选择性必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 273
+                                    },
+                                    {
+                                        "attributeId": "10330",
+                                        "attributeValue": "选择性必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 280
+                                    },
+                                    {
+                                        "attributeId": "10331",
+                                        "attributeValue": "选择性必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 281
+                                    }
+                                ],
+                                "ordered": 158
+                            },
+                            {
+                                "attributeId": "10898",
+                                "attributeValue": "沪教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    }
+                                ],
+                                "ordered": 229
+                            },
+                            {
+                                "attributeId": "11042",
+                                "attributeValue": "沪科技版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    }
+                                ],
+                                "ordered": 275
+                            }
+                        ],
+                        "ordered": 56
+                    },
+                    {
+                        "attributeId": "10006",
+                        "attributeValue": "化学",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10055",
+                                "attributeValue": "人教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10333",
+                                        "attributeValue": "选择性必修1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 299
+                                    },
+                                    {
+                                        "attributeId": "10334",
+                                        "attributeValue": "选择性必修2",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 303
+                                    },
+                                    {
+                                        "attributeId": "10335",
+                                        "attributeValue": "选择性必修3",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 305
+                                    },
+                                    {
+                                        "attributeId": "10340",
+                                        "attributeValue": "一轮复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 322
+                                    }
+                                ],
+                                "ordered": 45
+                            },
+                            {
+                                "attributeId": "10060",
+                                "attributeValue": "鲁科版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10333",
+                                        "attributeValue": "选择性必修1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 299
+                                    },
+                                    {
+                                        "attributeId": "10334",
+                                        "attributeValue": "选择性必修2",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 303
+                                    },
+                                    {
+                                        "attributeId": "10335",
+                                        "attributeValue": "选择性必修3",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 305
+                                    }
+                                ],
+                                "ordered": 115
+                            },
+                            {
+                                "attributeId": "10061",
+                                "attributeValue": "苏教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10333",
+                                        "attributeValue": "选择性必修1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 299
+                                    },
+                                    {
+                                        "attributeId": "10334",
+                                        "attributeValue": "选择性必修2",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 303
+                                    },
+                                    {
+                                        "attributeId": "10335",
+                                        "attributeValue": "选择性必修3",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 305
+                                    }
+                                ],
+                                "ordered": 127
+                            },
+                            {
+                                "attributeId": "10063",
+                                "attributeValue": "沪科版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    }
+                                ],
+                                "ordered": 166
+                            }
+                        ],
+                        "ordered": 68
+                    },
+                    {
+                        "attributeId": "10007",
+                        "attributeValue": "生物",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10055",
+                                "attributeValue": "人教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10292",
+                                        "attributeValue": "必修1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 16
+                                    },
+                                    {
+                                        "attributeId": "10293",
+                                        "attributeValue": "必修2",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 25
+                                    },
+                                    {
+                                        "attributeId": "10333",
+                                        "attributeValue": "选择性必修1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 299
+                                    },
+                                    {
+                                        "attributeId": "10334",
+                                        "attributeValue": "选择性必修2",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 303
+                                    },
+                                    {
+                                        "attributeId": "10335",
+                                        "attributeValue": "选择性必修3",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 305
+                                    },
+                                    {
+                                        "attributeId": "10340",
+                                        "attributeValue": "一轮复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 322
+                                    }
+                                ],
+                                "ordered": 45
+                            },
+                            {
+                                "attributeId": "10061",
+                                "attributeValue": "苏教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10292",
+                                        "attributeValue": "必修1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 16
+                                    },
+                                    {
+                                        "attributeId": "10293",
+                                        "attributeValue": "必修2",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 25
+                                    },
+                                    {
+                                        "attributeId": "10333",
+                                        "attributeValue": "选择性必修1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 299
+                                    },
+                                    {
+                                        "attributeId": "10334",
+                                        "attributeValue": "选择性必修2",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 303
+                                    },
+                                    {
+                                        "attributeId": "10335",
+                                        "attributeValue": "选择性必修3",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 305
+                                    }
+                                ],
+                                "ordered": 127
+                            },
+                            {
+                                "attributeId": "10066",
+                                "attributeValue": "浙科版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10292",
+                                        "attributeValue": "必修1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 16
+                                    },
+                                    {
+                                        "attributeId": "10293",
+                                        "attributeValue": "必修2",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 25
+                                    },
+                                    {
+                                        "attributeId": "10333",
+                                        "attributeValue": "选择性必修1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 299
+                                    },
+                                    {
+                                        "attributeId": "10334",
+                                        "attributeValue": "选择性必修2",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 303
+                                    },
+                                    {
+                                        "attributeId": "10335",
+                                        "attributeValue": "选择性必修3",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 305
+                                    }
+                                ],
+                                "ordered": 136
+                            },
+                            {
+                                "attributeId": "10062",
+                                "attributeValue": "北师大版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10292",
+                                        "attributeValue": "必修1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 16
+                                    }
+                                ],
+                                "ordered": 137
+                            }
+                        ],
+                        "ordered": 73
+                    },
+                    {
+                        "attributeId": "10008",
+                        "attributeValue": "政治",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10054",
+                                "attributeValue": "部编版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10292",
+                                        "attributeValue": "必修1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 16
+                                    },
+                                    {
+                                        "attributeId": "10293",
+                                        "attributeValue": "必修2",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 25
+                                    },
+                                    {
+                                        "attributeId": "10294",
+                                        "attributeValue": "必修3",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 42
+                                    },
+                                    {
+                                        "attributeId": "10295",
+                                        "attributeValue": "必修4",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 49
+                                    },
+                                    {
+                                        "attributeId": "10329",
+                                        "attributeValue": "选择性必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 273
+                                    },
+                                    {
+                                        "attributeId": "10330",
+                                        "attributeValue": "选择性必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 280
+                                    },
+                                    {
+                                        "attributeId": "10331",
+                                        "attributeValue": "选择性必修第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 281
+                                    },
+                                    {
+                                        "attributeId": "10340",
+                                        "attributeValue": "一轮复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 322
+                                    }
+                                ],
+                                "ordered": 31
+                            }
+                        ],
+                        "ordered": 102
+                    },
+                    {
+                        "attributeId": "10009",
+                        "attributeValue": "历史",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10054",
+                                "attributeValue": "部编版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10323",
+                                        "attributeValue": "必修上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 243
+                                    },
+                                    {
+                                        "attributeId": "10324",
+                                        "attributeValue": "必修下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 248
+                                    },
+                                    {
+                                        "attributeId": "10333",
+                                        "attributeValue": "选择性必修1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 299
+                                    },
+                                    {
+                                        "attributeId": "10334",
+                                        "attributeValue": "选择性必修2",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 303
+                                    },
+                                    {
+                                        "attributeId": "10335",
+                                        "attributeValue": "选择性必修3",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 305
+                                    },
+                                    {
+                                        "attributeId": "10340",
+                                        "attributeValue": "一轮复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 322
+                                    },
+                                    {
+                                        "attributeId": "10375",
+                                        "attributeValue": "一轮通史复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 428
+                                    }
+                                ],
+                                "ordered": 31
+                            }
+                        ],
+                        "ordered": 121
+                    },
+                    {
+                        "attributeId": "10010",
+                        "attributeValue": "地理",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10055",
+                                "attributeValue": "人教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10333",
+                                        "attributeValue": "选择性必修1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 299
+                                    },
+                                    {
+                                        "attributeId": "10334",
+                                        "attributeValue": "选择性必修2",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 303
+                                    },
+                                    {
+                                        "attributeId": "10335",
+                                        "attributeValue": "选择性必修3",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 305
+                                    },
+                                    {
+                                        "attributeId": "10340",
+                                        "attributeValue": "一轮复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 322
+                                    }
+                                ],
+                                "ordered": 45
+                            },
+                            {
+                                "attributeId": "10067",
+                                "attributeValue": "鲁教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10333",
+                                        "attributeValue": "选择性必修1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 299
+                                    },
+                                    {
+                                        "attributeId": "10334",
+                                        "attributeValue": "选择性必修2",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 303
+                                    },
+                                    {
+                                        "attributeId": "10335",
+                                        "attributeValue": "选择性必修3",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 305
+                                    }
+                                ],
+                                "ordered": 171
+                            },
+                            {
+                                "attributeId": "10068",
+                                "attributeValue": "湘教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10333",
+                                        "attributeValue": "选择性必修1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 299
+                                    },
+                                    {
+                                        "attributeId": "10334",
+                                        "attributeValue": "选择性必修2",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 303
+                                    },
+                                    {
+                                        "attributeId": "10335",
+                                        "attributeValue": "选择性必修3",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 305
+                                    }
+                                ],
+                                "ordered": 177
+                            },
+                            {
+                                "attributeId": "10069",
+                                "attributeValue": "中图版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    },
+                                    {
+                                        "attributeId": "10326",
+                                        "attributeValue": "必修第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 256
+                                    },
+                                    {
+                                        "attributeId": "10333",
+                                        "attributeValue": "选择性必修1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 299
+                                    },
+                                    {
+                                        "attributeId": "10334",
+                                        "attributeValue": "选择性必修2",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 303
+                                    },
+                                    {
+                                        "attributeId": "10335",
+                                        "attributeValue": "选择性必修3",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 305
+                                    }
+                                ],
+                                "ordered": 181
+                            },
+                            {
+                                "attributeId": "10974",
+                                "attributeValue": "中图中华地图版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10325",
+                                        "attributeValue": "必修第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 252
+                                    }
+                                ],
+                                "ordered": 266
+                            }
+                        ],
+                        "ordered": 133
+                    },
+                    {
+                        "attributeId": "10017",
+                        "attributeValue": "信息技术",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10100",
+                                "attributeValue": "浙教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10292",
+                                        "attributeValue": "必修1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 16
+                                    }
+                                ],
+                                "ordered": 212
+                            }
+                        ],
+                        "ordered": 161
+                    },
+                    {
+                        "attributeId": "10016",
+                        "attributeValue": "通用技术",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10061",
+                                "attributeValue": "苏教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10359",
+                                        "attributeValue": "技术与设计1",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 289
+                                    }
+                                ],
+                                "ordered": 127
+                            }
+                        ],
+                        "ordered": 163
+                    }
+                ],
+                "ordered": 11
+            },
+            {
+                "attributeId": "10001",
+                "attributeValue": "初中",
+                "categoryAttributeTrees": [
+                    {
+                        "attributeId": "10002",
+                        "attributeValue": "语文",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10054",
+                                "attributeValue": "部编版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10372",
+                                        "attributeValue": "七年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 599
+                                    },
+                                    {
+                                        "attributeId": "10567",
+                                        "attributeValue": "七年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 600
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "10568",
+                                        "attributeValue": "八年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 616
+                                    },
+                                    {
+                                        "attributeId": "10689",
+                                        "attributeValue": "九年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 639
+                                    },
+                                    {
+                                        "attributeId": "10649",
+                                        "attributeValue": "九年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 642
+                                    },
+                                    {
+                                        "attributeId": "10679",
+                                        "attributeValue": "中考总复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 678
+                                    }
+                                ],
+                                "ordered": 31
+                            }
+                        ],
+                        "ordered": 17
+                    },
+                    {
+                        "attributeId": "10003",
+                        "attributeValue": "数学",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10055",
+                                "attributeValue": "人教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10937",
+                                        "attributeValue": "七年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 566
+                                    },
+                                    {
+                                        "attributeId": "10372",
+                                        "attributeValue": "七年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 599
+                                    },
+                                    {
+                                        "attributeId": "10567",
+                                        "attributeValue": "七年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 600
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "10568",
+                                        "attributeValue": "八年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 616
+                                    },
+                                    {
+                                        "attributeId": "10689",
+                                        "attributeValue": "九年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 639
+                                    },
+                                    {
+                                        "attributeId": "10649",
+                                        "attributeValue": "九年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 642
+                                    }
+                                ],
+                                "ordered": 45
+                            },
+                            {
+                                "attributeId": "10062",
+                                "attributeValue": "北师大版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10937",
+                                        "attributeValue": "七年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 566
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "10568",
+                                        "attributeValue": "八年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 616
+                                    },
+                                    {
+                                        "attributeId": "10689",
+                                        "attributeValue": "九年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 639
+                                    },
+                                    {
+                                        "attributeId": "10649",
+                                        "attributeValue": "九年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 642
+                                    }
+                                ],
+                                "ordered": 137
+                            },
+                            {
+                                "attributeId": "10068",
+                                "attributeValue": "湘教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10567",
+                                        "attributeValue": "七年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 600
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "10689",
+                                        "attributeValue": "九年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 639
+                                    },
+                                    {
+                                        "attributeId": "10649",
+                                        "attributeValue": "九年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 642
+                                    }
+                                ],
+                                "ordered": 177
+                            },
+                            {
+                                "attributeId": "10099",
+                                "attributeValue": "华师大版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10567",
+                                        "attributeValue": "七年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 600
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "10568",
+                                        "attributeValue": "八年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 616
+                                    },
+                                    {
+                                        "attributeId": "10689",
+                                        "attributeValue": "九年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 639
+                                    },
+                                    {
+                                        "attributeId": "10649",
+                                        "attributeValue": "九年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 642
+                                    }
+                                ],
+                                "ordered": 207
+                            },
+                            {
+                                "attributeId": "10100",
+                                "attributeValue": "浙教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10372",
+                                        "attributeValue": "七年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 599
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "10689",
+                                        "attributeValue": "九年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 639
+                                    },
+                                    {
+                                        "attributeId": "10649",
+                                        "attributeValue": "九年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 642
+                                    }
+                                ],
+                                "ordered": 212
+                            },
+                            {
+                                "attributeId": "10893",
+                                "attributeValue": "苏科版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "10568",
+                                        "attributeValue": "八年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 616
+                                    },
+                                    {
+                                        "attributeId": "10689",
+                                        "attributeValue": "九年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 639
+                                    }
+                                ],
+                                "ordered": 235
+                            },
+                            {
+                                "attributeId": "10916",
+                                "attributeValue": "青岛版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    }
+                                ],
+                                "ordered": 245
+                            },
+                            {
+                                "attributeId": "10964",
+                                "attributeValue": "冀教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10937",
+                                        "attributeValue": "七年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 566
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "10689",
+                                        "attributeValue": "九年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 639
+                                    }
+                                ],
+                                "ordered": 255
+                            },
+                            {
+                                "attributeId": "10103",
+                                "attributeValue": "中考复习",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10679",
+                                        "attributeValue": "中考总复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 678
+                                    }
+                                ],
+                                "ordered": 283
+                            }
+                        ],
+                        "ordered": 20
+                    },
+                    {
+                        "attributeId": "10004",
+                        "attributeValue": "英语",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10055",
+                                "attributeValue": "人教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10372",
+                                        "attributeValue": "七年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 599
+                                    },
+                                    {
+                                        "attributeId": "10567",
+                                        "attributeValue": "七年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 600
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "10568",
+                                        "attributeValue": "八年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 616
+                                    },
+                                    {
+                                        "attributeId": "10569",
+                                        "attributeValue": "九年级全一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 668
+                                    }
+                                ],
+                                "ordered": 45
+                            },
+                            {
+                                "attributeId": "10058",
+                                "attributeValue": "外研版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    }
+                                ],
+                                "ordered": 98
+                            },
+                            {
+                                "attributeId": "10059",
+                                "attributeValue": "译林版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    }
+                                ],
+                                "ordered": 105
+                            },
+                            {
+                                "attributeId": "10760",
+                                "attributeValue": "沪教牛津版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10679",
+                                        "attributeValue": "中考总复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 678
+                                    }
+                                ],
+                                "ordered": 214
+                            },
+                            {
+                                "attributeId": "10964",
+                                "attributeValue": "冀教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    }
+                                ],
+                                "ordered": 255
+                            },
+                            {
+                                "attributeId": "11072",
+                                "attributeValue": "仁爱版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "10568",
+                                        "attributeValue": "八年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 616
+                                    },
+                                    {
+                                        "attributeId": "10689",
+                                        "attributeValue": "九年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 639
+                                    },
+                                    {
+                                        "attributeId": "10649",
+                                        "attributeValue": "九年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 642
+                                    }
+                                ],
+                                "ordered": 279
+                            },
+                            {
+                                "attributeId": "10103",
+                                "attributeValue": "中考复习",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10679",
+                                        "attributeValue": "中考总复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 678
+                                    }
+                                ],
+                                "ordered": 283
+                            }
+                        ],
+                        "ordered": 46
+                    },
+                    {
+                        "attributeId": "10005",
+                        "attributeValue": "物理",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10055",
+                                "attributeValue": "人教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10938",
+                                        "attributeValue": "八年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 569
+                                    },
+                                    {
+                                        "attributeId": "10939",
+                                        "attributeValue": "八年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 572
+                                    },
+                                    {
+                                        "attributeId": "10568",
+                                        "attributeValue": "八年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 616
+                                    },
+                                    {
+                                        "attributeId": "10569",
+                                        "attributeValue": "九年级全一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 668
+                                    }
+                                ],
+                                "ordered": 45
+                            },
+                            {
+                                "attributeId": "10062",
+                                "attributeValue": "北师大版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10938",
+                                        "attributeValue": "八年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 569
+                                    },
+                                    {
+                                        "attributeId": "10569",
+                                        "attributeValue": "九年级全一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 668
+                                    }
+                                ],
+                                "ordered": 137
+                            },
+                            {
+                                "attributeId": "10065",
+                                "attributeValue": "教科版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10938",
+                                        "attributeValue": "八年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 569
+                                    },
+                                    {
+                                        "attributeId": "10939",
+                                        "attributeValue": "八年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 572
+                                    }
+                                ],
+                                "ordered": 147
+                            },
+                            {
+                                "attributeId": "10063",
+                                "attributeValue": "沪科版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10963",
+                                        "attributeValue": "八年级全一册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 573
+                                    },
+                                    {
+                                        "attributeId": "10569",
+                                        "attributeValue": "九年级全一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 668
+                                    }
+                                ],
+                                "ordered": 166
+                            },
+                            {
+                                "attributeId": "10893",
+                                "attributeValue": "苏科版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10938",
+                                        "attributeValue": "八年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 569
+                                    },
+                                    {
+                                        "attributeId": "10689",
+                                        "attributeValue": "九年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 639
+                                    }
+                                ],
+                                "ordered": 235
+                            },
+                            {
+                                "attributeId": "10884",
+                                "attributeValue": "沪粤版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10938",
+                                        "attributeValue": "八年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 569
+                                    }
+                                ],
+                                "ordered": 237
+                            },
+                            {
+                                "attributeId": "10103",
+                                "attributeValue": "中考复习",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10679",
+                                        "attributeValue": "中考总复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 678
+                                    }
+                                ],
+                                "ordered": 283
+                            }
+                        ],
+                        "ordered": 56
+                    },
+                    {
+                        "attributeId": "10006",
+                        "attributeValue": "化学",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10055",
+                                "attributeValue": "人教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10943",
+                                        "attributeValue": "九年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 579
+                                    },
+                                    {
+                                        "attributeId": "10940",
+                                        "attributeValue": "九年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 597
+                                    },
+                                    {
+                                        "attributeId": "10649",
+                                        "attributeValue": "九年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 642
+                                    }
+                                ],
+                                "ordered": 45
+                            },
+                            {
+                                "attributeId": "10067",
+                                "attributeValue": "鲁教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10943",
+                                        "attributeValue": "九年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 579
+                                    },
+                                    {
+                                        "attributeId": "10940",
+                                        "attributeValue": "九年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 597
+                                    }
+                                ],
+                                "ordered": 171
+                            },
+                            {
+                                "attributeId": "10898",
+                                "attributeValue": "沪教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10943",
+                                        "attributeValue": "九年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 579
+                                    },
+                                    {
+                                        "attributeId": "10940",
+                                        "attributeValue": "九年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 597
+                                    }
+                                ],
+                                "ordered": 229
+                            },
+                            {
+                                "attributeId": "10934",
+                                "attributeValue": "科粤版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10943",
+                                        "attributeValue": "九年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 579
+                                    },
+                                    {
+                                        "attributeId": "10940",
+                                        "attributeValue": "九年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 597
+                                    }
+                                ],
+                                "ordered": 250
+                            },
+                            {
+                                "attributeId": "10103",
+                                "attributeValue": "中考复习",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10679",
+                                        "attributeValue": "中考总复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 678
+                                    }
+                                ],
+                                "ordered": 283
+                            }
+                        ],
+                        "ordered": 68
+                    },
+                    {
+                        "attributeId": "10007",
+                        "attributeValue": "生物",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10055",
+                                "attributeValue": "人教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10937",
+                                        "attributeValue": "七年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 566
+                                    },
+                                    {
+                                        "attributeId": "10372",
+                                        "attributeValue": "七年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 599
+                                    },
+                                    {
+                                        "attributeId": "10567",
+                                        "attributeValue": "七年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 600
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "10568",
+                                        "attributeValue": "八年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 616
+                                    }
+                                ],
+                                "ordered": 45
+                            },
+                            {
+                                "attributeId": "10061",
+                                "attributeValue": "苏教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10937",
+                                        "attributeValue": "七年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 566
+                                    }
+                                ],
+                                "ordered": 127
+                            },
+                            {
+                                "attributeId": "10062",
+                                "attributeValue": "北师大版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10937",
+                                        "attributeValue": "七年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 566
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    }
+                                ],
+                                "ordered": 137
+                            },
+                            {
+                                "attributeId": "10893",
+                                "attributeValue": "苏科版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10937",
+                                        "attributeValue": "七年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 566
+                                    }
+                                ],
+                                "ordered": 235
+                            },
+                            {
+                                "attributeId": "10914",
+                                "attributeValue": "冀少版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10937",
+                                        "attributeValue": "七年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 566
+                                    },
+                                    {
+                                        "attributeId": "10372",
+                                        "attributeValue": "七年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 599
+                                    }
+                                ],
+                                "ordered": 242
+                            },
+                            {
+                                "attributeId": "10965",
+                                "attributeValue": "济南版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10937",
+                                        "attributeValue": "七年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 566
+                                    }
+                                ],
+                                "ordered": 260
+                            },
+                            {
+                                "attributeId": "10103",
+                                "attributeValue": "中考复习",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10679",
+                                        "attributeValue": "中考总复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 678
+                                    }
+                                ],
+                                "ordered": 283
+                            }
+                        ],
+                        "ordered": 73
+                    },
+                    {
+                        "attributeId": "10012",
+                        "attributeValue": "道德与法治",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10054",
+                                "attributeValue": "部编版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10372",
+                                        "attributeValue": "七年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 599
+                                    },
+                                    {
+                                        "attributeId": "10567",
+                                        "attributeValue": "七年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 600
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "10568",
+                                        "attributeValue": "八年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 616
+                                    },
+                                    {
+                                        "attributeId": "10689",
+                                        "attributeValue": "九年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 639
+                                    },
+                                    {
+                                        "attributeId": "10649",
+                                        "attributeValue": "九年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 642
+                                    },
+                                    {
+                                        "attributeId": "10679",
+                                        "attributeValue": "中考总复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 678
+                                    }
+                                ],
+                                "ordered": 31
+                            }
+                        ],
+                        "ordered": 112
+                    },
+                    {
+                        "attributeId": "10009",
+                        "attributeValue": "历史",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10054",
+                                "attributeValue": "部编版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10372",
+                                        "attributeValue": "七年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 599
+                                    },
+                                    {
+                                        "attributeId": "10567",
+                                        "attributeValue": "七年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 600
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "10568",
+                                        "attributeValue": "八年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 616
+                                    },
+                                    {
+                                        "attributeId": "10689",
+                                        "attributeValue": "九年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 639
+                                    },
+                                    {
+                                        "attributeId": "10649",
+                                        "attributeValue": "九年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 642
+                                    },
+                                    {
+                                        "attributeId": "10679",
+                                        "attributeValue": "中考总复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 678
+                                    }
+                                ],
+                                "ordered": 31
+                            }
+                        ],
+                        "ordered": 121
+                    },
+                    {
+                        "attributeId": "10010",
+                        "attributeValue": "地理",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10055",
+                                "attributeValue": "人教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10937",
+                                        "attributeValue": "七年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 566
+                                    },
+                                    {
+                                        "attributeId": "10372",
+                                        "attributeValue": "七年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 599
+                                    },
+                                    {
+                                        "attributeId": "10567",
+                                        "attributeValue": "七年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 600
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "10568",
+                                        "attributeValue": "八年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 616
+                                    }
+                                ],
+                                "ordered": 45
+                            },
+                            {
+                                "attributeId": "10068",
+                                "attributeValue": "湘教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10937",
+                                        "attributeValue": "七年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 566
+                                    }
+                                ],
+                                "ordered": 177
+                            },
+                            {
+                                "attributeId": "10069",
+                                "attributeValue": "中图版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10937",
+                                        "attributeValue": "七年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 566
+                                    }
+                                ],
+                                "ordered": 181
+                            },
+                            {
+                                "attributeId": "10801",
+                                "attributeValue": "晋教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10937",
+                                        "attributeValue": "七年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 566
+                                    }
+                                ],
+                                "ordered": 225
+                            },
+                            {
+                                "attributeId": "10966",
+                                "attributeValue": "粤教粤人版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    }
+                                ],
+                                "ordered": 262
+                            },
+                            {
+                                "attributeId": "10967",
+                                "attributeValue": "商务星球版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10937",
+                                        "attributeValue": "七年级下册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 566
+                                    }
+                                ],
+                                "ordered": 271
+                            },
+                            {
+                                "attributeId": "10103",
+                                "attributeValue": "中考复习",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10679",
+                                        "attributeValue": "中考总复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 678
+                                    }
+                                ],
+                                "ordered": 283
+                            }
+                        ],
+                        "ordered": 133
+                    },
+                    {
+                        "attributeId": "10014",
+                        "attributeValue": "科学",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10100",
+                                "attributeValue": "浙教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10372",
+                                        "attributeValue": "七年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 599
+                                    }
+                                ],
+                                "ordered": 212
+                            }
+                        ],
+                        "ordered": 143
+                    }
+                ],
+                "ordered": 32
+            },
+            {
+                "attributeId": "9999",
+                "attributeValue": "初中（五四制）",
+                "categoryAttributeTrees": [
+                    {
+                        "attributeId": "10002",
+                        "attributeValue": "语文",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10054",
+                                "attributeValue": "部编版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "11056",
+                                        "attributeValue": "六年级上（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 548
+                                    },
+                                    {
+                                        "attributeId": "10372",
+                                        "attributeValue": "七年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 599
+                                    },
+                                    {
+                                        "attributeId": "10567",
+                                        "attributeValue": "七年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 600
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "10568",
+                                        "attributeValue": "八年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 616
+                                    },
+                                    {
+                                        "attributeId": "10689",
+                                        "attributeValue": "九年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 639
+                                    },
+                                    {
+                                        "attributeId": "10649",
+                                        "attributeValue": "九年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 642
+                                    },
+                                    {
+                                        "attributeId": "10679",
+                                        "attributeValue": "中考总复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 678
+                                    }
+                                ],
+                                "ordered": 31
+                            }
+                        ],
+                        "ordered": 17
+                    },
+                    {
+                        "attributeId": "10003",
+                        "attributeValue": "数学",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10067",
+                                "attributeValue": "鲁教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "11056",
+                                        "attributeValue": "六年级上（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 548
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "10689",
+                                        "attributeValue": "九年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 639
+                                    }
+                                ],
+                                "ordered": 171
+                            }
+                        ],
+                        "ordered": 20
+                    },
+                    {
+                        "attributeId": "10004",
+                        "attributeValue": "英语",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10067",
+                                "attributeValue": "鲁教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "11056",
+                                        "attributeValue": "六年级上（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 548
+                                    },
+                                    {
+                                        "attributeId": "10936",
+                                        "attributeValue": "七年级上册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 565
+                                    },
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "11073",
+                                        "attributeValue": "九年级（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 1045
+                                    }
+                                ],
+                                "ordered": 171
+                            }
+                        ],
+                        "ordered": 46
+                    },
+                    {
+                        "attributeId": "10005",
+                        "attributeValue": "物理",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10063",
+                                "attributeValue": "沪科版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10963",
+                                        "attributeValue": "八年级全一册（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 573
+                                    },
+                                    {
+                                        "attributeId": "10569",
+                                        "attributeValue": "九年级全一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 668
+                                    }
+                                ],
+                                "ordered": 166
+                            }
+                        ],
+                        "ordered": 56
+                    },
+                    {
+                        "attributeId": "10012",
+                        "attributeValue": "道德与法治",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10054",
+                                "attributeValue": "部编版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "10374",
+                                        "attributeValue": "八年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 611
+                                    },
+                                    {
+                                        "attributeId": "10568",
+                                        "attributeValue": "八年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 616
+                                    },
+                                    {
+                                        "attributeId": "10689",
+                                        "attributeValue": "九年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 639
+                                    },
+                                    {
+                                        "attributeId": "10649",
+                                        "attributeValue": "九年级下册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 642
+                                    },
+                                    {
+                                        "attributeId": "10679",
+                                        "attributeValue": "中考总复习",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 678
+                                    },
+                                    {
+                                        "attributeId": "11064",
+                                        "attributeValue": "六年级全一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 1038
+                                    },
+                                    {
+                                        "attributeId": "11065",
+                                        "attributeValue": "七年级全一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 1039
+                                    }
+                                ],
+                                "ordered": 31
+                            }
+                        ],
+                        "ordered": 112
+                    },
+                    {
+                        "attributeId": "10009",
+                        "attributeValue": "历史",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10054",
+                                "attributeValue": "部编版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "11058",
+                                        "attributeValue": "中国历史第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 1032
+                                    },
+                                    {
+                                        "attributeId": "11059",
+                                        "attributeValue": "中国历史第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 1033
+                                    },
+                                    {
+                                        "attributeId": "11060",
+                                        "attributeValue": "中国历史第三册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 1034
+                                    },
+                                    {
+                                        "attributeId": "11061",
+                                        "attributeValue": "中国历史第四册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 1035
+                                    },
+                                    {
+                                        "attributeId": "11062",
+                                        "attributeValue": "世界历史第一册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 1036
+                                    },
+                                    {
+                                        "attributeId": "11063",
+                                        "attributeValue": "世界历史第二册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 1037
+                                    }
+                                ],
+                                "ordered": 31
+                            }
+                        ],
+                        "ordered": 121
+                    },
+                    {
+                        "attributeId": "10010",
+                        "attributeValue": "地理",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10067",
+                                "attributeValue": "鲁教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "11056",
+                                        "attributeValue": "六年级上（新）",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 548
+                                    },
+                                    {
+                                        "attributeId": "10372",
+                                        "attributeValue": "七年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 599
+                                    }
+                                ],
+                                "ordered": 171
+                            }
+                        ],
+                        "ordered": 133
+                    }
+                ],
+                "ordered": 630
+            },
+            {
+                "attributeId": "9000",
+                "attributeValue": "小学",
+                "categoryAttributeTrees": [
+                    {
+                        "attributeId": "10002",
+                        "attributeValue": "语文",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10055",
+                                "attributeValue": "人教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "11125",
+                                        "attributeValue": "三年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 1095
+                                    }
+                                ],
+                                "ordered": 45
+                            }
+                        ],
+                        "ordered": 17
+                    },
+                    {
+                        "attributeId": "10003",
+                        "attributeValue": "数学",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10055",
+                                "attributeValue": "人教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "11125",
+                                        "attributeValue": "三年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 1095
+                                    }
+                                ],
+                                "ordered": 45
+                            }
+                        ],
+                        "ordered": 20
+                    },
+                    {
+                        "attributeId": "10004",
+                        "attributeValue": "英语",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10055",
+                                "attributeValue": "人教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "11125",
+                                        "attributeValue": "三年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 1095
+                                    }
+                                ],
+                                "ordered": 45
+                            }
+                        ],
+                        "ordered": 46
+                    },
+                    {
+                        "attributeId": "10014",
+                        "attributeValue": "科学",
+                        "categoryAttributeTrees": [
+                            {
+                                "attributeId": "10055",
+                                "attributeValue": "人教版",
+                                "categoryAttributeTrees": [
+                                    {
+                                        "attributeId": "11125",
+                                        "attributeValue": "三年级上册",
+                                        "categoryAttributeTrees": [],
+                                        "ordered": 1095
+                                    }
+                                ],
+                                "ordered": 45
+                            }
+                        ],
+                        "ordered": 143
+                    }
+                ],
+                "ordered": 1001
+            }
+        ]
+    },
+    "msg": None
+}
