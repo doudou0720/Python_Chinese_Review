@@ -2,3 +2,4 @@ extensions/main/english/stardict.db
 log.log
 .venv/*
 *.pyc
+.vscode
