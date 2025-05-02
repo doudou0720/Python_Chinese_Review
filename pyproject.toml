@@ -1,3 +1,5 @@
+[tool.uv]
+python-install-mirror = "https://bgithub.xyz/astral-sh/python-build-standalone/releases/download"
 [[tool.uv.index]]
 url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 default = true

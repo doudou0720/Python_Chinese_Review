@@ -69,73 +69,75 @@ if __name__ == "__main__":
 
                 time.sleep(1)        
         elif sys.platform.startswith("linux"):
-            print("请打开命令行，输入:\n> sudo apt update\n> sudo apt upgrade\n> sudo apt install git\n> sudo ln -s ./bin/MinGit <你的Git可执行文件位置>")
+            print("请打开命令行，输入:\n> sudo apt update\n> sudo apt upgrade\n> sudo apt install git")
             input("然后按下回车\n>>")
         else:
             print("当前系统是其他操作系统(识别为:{name}),暂不支持\r".format(name=str(sys.platform)),end="")
 
-        with tempfile.TemporaryDirectory() as dir:
-            clean()
-            print("STEP(1) 克隆元数据")
-            cnt.value=0
-            @retrying.retry()
-            def CloneMeta():
-                global dir
-                time.sleep(5)
-                p = multiprocessing.Pool(processes=5)
-                if sys.platform.startswith("win"):    
-                    p.apply_async(popen,(f"\"{os.path.join(os.path.split(__file__)[0],'./bin/MinGit/cmd/git.exe')}\" clone --filter=blob:none --sparse https://gitee.com/mirrors/bootstrap.git "+str(dir)+"/BootStrap" ,))
-                    p.apply_async(popen,(f"\"{os.path.join(os.path.split(__file__)[0],'./bin/MinGit/cmd/git.exe')}\" clone --filter=blob:none --sparse https://gitclone.com/github.com/lxgw/LxgwWenKai.git "+str(dir)+"/Lxgw" ,))
-                    p.apply_async(popen,(f"\"{os.path.join(os.path.split(__file__)[0],'./bin/MinGit/cmd/git.exe')}\" clone -b 3.7.1 --filter=blob:none --sparse https://gitee.com/mirrors/jQuery.git "+str(dir)+"/jQuery" ,))
-                    p.apply_async(popen,(f"\"{os.path.join(os.path.split(__file__)[0],'./bin/MinGit/cmd/git.exe')}\" clone --filter=blob:none --sparse https://gitee.com/mirrors/Bootstrap-Icons.git "+str(dir)+"/BootStrapIcons" ,))
-                elif sys.platform.startswith("linux"):
-                    p.apply_async(popen,(f"git clone --filter=blob:none --sparse https://gitee.com/mirrors/bootstrap.git "+str(dir)+"/BootStrap" ,))
-                    p.apply_async(popen,(f"git clone --filter=blob:none --sparse https://gitclone.com/github.com/lxgw/LxgwWenKai.git "+str(dir)+"/Lxgw" ,))
-                    p.apply_async(popen,(f"git clone -b 3.7.1 --filter=blob:none --sparse https://gitee.com/mirrors/jQuery.git "+str(dir)+"/jQuery" ,))
-                    p.apply_async(popen,(f"git clone --filter=blob:none --sparse https://gitee.com/mirrors/Bootstrap-Icons.git "+str(dir)+"/BootStrapIcons" ,))
-                p.close()
-                p.join()
-                if os.listdir(str(dir)+"/BootStrapIcons") != [] and os.listdir(str(dir)+"/BootStrap") != [] and os.listdir(str(dir)+"/Lxgw") != [] and os.listdir(str(dir)+"/jQuery") != []:
-                    return
-                else:
-                    raise ConnectionError("Clone Error!")
-            CloneMeta()
-            del CloneMeta
-            clean(0.5)
-            print("STEP(2) 克隆数据")
-            cnt.value = 0
-            @retrying.retry()
-            def CloneMeta():
-                global dir
-                p = multiprocessing.Pool(processes=5)
-                if sys.platform.startswith("win"):
-                    command = f"\"{os.path.abspath(os.path.join(os.path.split(__file__)[0],'./bin/MinGit/cmd/git.exe'))}\" "
-                    p.apply_async(popen,(f"cd /D {dir}/Bootstrap && {command} sparse-checkout add dist" ,))
-                    p.apply_async(popen,(f"cd /D {dir}/Lxgw && {command} sparse-checkout add fonts/TTF" ,))
-                    p.apply_async(popen,(f"cd /D {dir}/jQuery && {command} sparse-checkout add dist" ,))
-                    p.apply_async(popen,(f"cd /D {dir}/BootStrapIcons && {command} sparse-checkout add icons && {command} sparse-checkout add font" ,))
-                elif sys.platform.startswith("linux"):
-                    command = "git"
-                    p.apply_async(popen,(f"cd {dir}/Bootstrap;{command} sparse-checkout add dist" ,))
-                    p.apply_async(popen,(f"cd {dir}/Lxgw;{command} sparse-checkout add fonts" ,))
-                    p.apply_async(popen,(f"cd {dir}/jQuery;{command} sparse-checkout add dist" ,))
-                    p.apply_async(popen,(f"cd {dir}/BootStrapIcons;{command} sparse-checkout add icons" ,))
-                p.close()
-                p.join()
-                if os.listdir(str(dir)+"/BootStrapIcons") != [] and os.listdir(str(dir)+"/BootStrap") != [] and os.listdir(str(dir)+"/Lxgw") != [] and os.listdir(str(dir)+"/jQuery") != []:
-                    return
-                else:
-                    raise ConnectionError("Clone Error!")
-            CloneMeta()
-            clean(0.5)
-            print("STEP(3) Copy")
-            os.makedirs("./static/js",exist_ok=True)
-            os.makedirs("./static/css",exist_ok=True)
-            os.makedirs("./static/fonts",exist_ok=True)
-            os.makedirs("./static/icons",exist_ok=True)
-            shutil.move(os.path.join(dir,"./jQuery/dist/jquery.js"),"./static/js/jquery-3.6.1.js")  #Although it is not 3.6.1 :)
-            copyFile(os.path.join(dir,"./BootStrap/dist/css/"),"./static/css")
-            copyFile(os.path.join(dir,"./BootStrap/dist/js/"),"./static/js")
-            copyFile(os.path.join(dir,"./BootStrapIcons/icons/"),"./static/icons")
-            copyFile(os.path.join(dir,"./Lxgw/fonts/TTF/"),"./static/fonts")
-            copyFile(os.path.join(dir,"./BootStrapIcons/font/"),"./static/css")
+        dir = tempfile.mkdtemp()
+        clean()
+        print("STEP(1) 克隆元数据")
+        cnt.value=0
+        @retrying.retry()
+        def CloneMeta():
+            global dir
+            time.sleep(5)
+            p = multiprocessing.Pool(processes=5)
+            if sys.platform.startswith("win"):    
+                p.apply_async(popen,(f"\"{os.path.join(os.path.split(__file__)[0],'./bin/MinGit/cmd/git.exe')}\" clone --filter=blob:none --sparse https://gitee.com/mirrors/bootstrap.git "+str(dir)+"/BootStrap" ,))
+                p.apply_async(popen,(f"\"{os.path.join(os.path.split(__file__)[0],'./bin/MinGit/cmd/git.exe')}\" clone --filter=blob:none --sparse https://gitclone.com/github.com/lxgw/LxgwWenKai.git "+str(dir)+"/Lxgw" ,))
+                p.apply_async(popen,(f"\"{os.path.join(os.path.split(__file__)[0],'./bin/MinGit/cmd/git.exe')}\" clone -b 3.7.1 --filter=blob:none --sparse https://gitee.com/mirrors/jQuery.git "+str(dir)+"/jQuery" ,))
+                p.apply_async(popen,(f"\"{os.path.join(os.path.split(__file__)[0],'./bin/MinGit/cmd/git.exe')}\" clone --filter=blob:none --sparse https://gitee.com/mirrors/Bootstrap-Icons.git "+str(dir)+"/BootStrapIcons" ,))
+            elif sys.platform.startswith("linux"):
+                p.apply_async(popen,(f"git clone --filter=blob:none --sparse https://gitee.com/mirrors/bootstrap.git "+str(dir)+"/BootStrap" ,))
+                p.apply_async(popen,(f"git clone --filter=blob:none --sparse https://gitclone.com/github.com/lxgw/LxgwWenKai.git "+str(dir)+"/Lxgw" ,))
+                p.apply_async(popen,(f"git clone -b 3.7.1 --filter=blob:none --sparse https://gitee.com/mirrors/jQuery.git "+str(dir)+"/jQuery" ,))
+                p.apply_async(popen,(f"git clone --filter=blob:none --sparse https://gitee.com/mirrors/Bootstrap-Icons.git "+str(dir)+"/BootStrapIcons" ,))
+            p.close()
+            p.join()
+            if os.listdir(str(dir)+"/BootStrapIcons") != [] and os.listdir(str(dir)+"/BootStrap") != [] and os.listdir(str(dir)+"/Lxgw") != [] and os.listdir(str(dir)+"/jQuery") != []:
+                return
+            else:
+                raise ConnectionError("Clone Error!")
+        CloneMeta()
+        del CloneMeta
+        clean(0.5)
+        print("STEP(2) 克隆数据")
+        cnt.value = 0
+        @retrying.retry()
+        def CloneMeta():
+            global dir
+            p = multiprocessing.Pool(processes=5)
+            if sys.platform.startswith("win"):
+                command = f"\"{os.path.abspath(os.path.join(os.path.split(__file__)[0],'./bin/MinGit/cmd/git.exe'))}\" "
+                p.apply_async(popen,(f"cd /D {dir}/BootStrap && {command} sparse-checkout add dist" ,))
+                p.apply_async(popen,(f"cd /D {dir}/Lxgw && {command} sparse-checkout add fonts/TTF" ,))
+                p.apply_async(popen,(f"cd /D {dir}/jQuery && {command} sparse-checkout add dist" ,))
+                p.apply_async(popen,(f"cd /D {dir}/BootStrapIcons && {command} sparse-checkout add icons && {command} sparse-checkout add font" ,))
+            elif sys.platform.startswith("linux"):
+                command = "git"
+                p.apply_async(popen,(f"cd {dir}/BootStrap;{command} sparse-checkout add dist" ,))
+                p.apply_async(popen,(f"cd {dir}/Lxgw;{command} sparse-checkout add fonts" ,))
+                p.apply_async(popen,(f"cd {dir}/jQuery;{command} sparse-checkout add dist" ,))
+                p.apply_async(popen,(f"cd {dir}/BootStrapIcons;{command} sparse-checkout add icons ; {command} sparse-checkout add font" ,))
+            p.close()
+            p.join()
+            if os.listdir(str(dir)+"/BootStrapIcons") != [] and os.listdir(str(dir)+"/BootStrap") != [] and os.listdir(str(dir)+"/Lxgw") != [] and os.listdir(str(dir)+"/jQuery") != []:
+                return
+            else:
+                raise ConnectionError("Clone Error!")
+        CloneMeta()
+        clean(0.5)
+        print("STEP(3) Copy")
+        os.makedirs("./static/js",exist_ok=True)
+        os.makedirs("./static/css",exist_ok=True)
+        os.makedirs("./static/fonts",exist_ok=True)
+        os.makedirs("./static/icons",exist_ok=True)
+        shutil.move(os.path.join(dir,"./jQuery/dist/jquery.js"),"./static/js/jquery-3.6.1.js")  #Although it is not 3.6.1 :)
+        copyFile(os.path.join(dir,"./BootStrap/dist/css/"),"./static/css")
+        copyFile(os.path.join(dir,"./BootStrap/dist/js/"),"./static/js")
+        copyFile(os.path.join(dir,"./BootStrapIcons/icons/"),"./static/icons")
+        copyFile(os.path.join(dir,"./Lxgw/fonts/TTF/"),"./static/fonts")
+        copyFile(os.path.join(dir,"./BootStrapIcons/font/"),"./static/css")
+        shutil.rmtree(dir)
+        print("Done.")
